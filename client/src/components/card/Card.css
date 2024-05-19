@@ -1,20 +1,26 @@
 .singlecard {
-    min-height: 300px;
-    max-width: 280px;
-    padding: 1rem;
-    background: transparent;
+    position: relative;
+    max-height: 450px ;
+    width: 245px !important;
+    padding: .5rem;
+    background: transparent ;
     color: var(--text-color);
     border: none;
 }
 
-.singlecard>img {
+.singlecard > .cardbg {
+    position: relative;
     border-radius: 10px !important;
-    object-fit: cover !important;
-    height: 350px !important;
+    height: 348px !important;
+    width: 100% !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important ;
+    background-size: cover !important;
+    overflow: hidden;
 }
 
 .movieDetails {
-    min-height: 150px;
+    max-height: fit-content !important;
     width: 100%;
     justify-content: space-between !important;
     padding: 1rem 0;
@@ -29,7 +35,7 @@
 
 .movieDetails h4 {
     font-family: 'Helvetica Neue', sans-serif;
-    letter-spacing: .1rem;
+    font-size: var(--p1-Paragraph);
     width: 100%;
     text-overflow: ellipsis;
     margin-bottom: 0;
@@ -42,6 +48,7 @@
     font-family: 'Helvetica Neue', sans-serif;
     font-weight: 400;
     color: #D9D9D9;
+    margin-bottom: 0 !important;
 }
 
 .movieDetails span {
@@ -59,6 +66,27 @@
 font-family: 'Helvetica Neue', sans-serif;
     font-weight: 800;
     height: auto;
+}
+.cardsBtn{
+    position: absolute;
+    bottom: -30%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) .3s;
+
+}
+
+.singlecard:hover .cardbg::before{
+    content: "";
+    position: absolute;
+    height:100%;
+    width:100%;
+    background-color:#00000066;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) .3s;
+}
+
+.singlecard:hover .cardsBtn{
+   bottom:0%;
 }
 
 .movieDetails .mainbtn {

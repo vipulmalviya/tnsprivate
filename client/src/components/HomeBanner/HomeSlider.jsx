@@ -1,21 +1,16 @@
-import React from 'react'
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import "./HomeSlider.css"
-import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+import "./HomeSlider.css";
+import { EffectCoverflow, Pagination, Navigation, Autoplay } from 'swiper/modules';
 import Button from '../buttons/Button';
 import ButtonSec from '../buttons/ButtonSec';
-import { IoAdd } from 'react-icons/io5';
 import { FaPlay } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
 import { CiCircleChevLeft, CiCircleChevRight } from 'react-icons/ci';
 import { LuPlus } from 'react-icons/lu';
-
-
-
 
 const Lcard = [
     {
@@ -115,10 +110,13 @@ const Lcard = [
 
 
 const HomeSlider = () => {
+
     return (
         <>
             <section className="Homecontainer d-flex align-items-center justify-content-center">
                 <Swiper
+                    speed={1200}
+                    autoplay={{ delay: 5000, disableOnInteraction: true , pauseOnMouseEnter: true ,waitForTransition: true}}
                     effect={'coverflow'}
                     grabCursor={true}
                     centeredSlides={true}
@@ -129,7 +127,6 @@ const HomeSlider = () => {
                         stretch: 0,
                         depth: 100,
                         modifier: 3,
-                        slideShadows: true,
                     }}
                     pagination={{ el: '.swiper-pagination', clickable: true }}
                     navigation={{
@@ -137,18 +134,18 @@ const HomeSlider = () => {
                         prevEl: '.swiper-button-prev',
                         clickable: true,
                     }}
-                    modules={[EffectCoverflow, Pagination, Navigation]}
+                    modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
                     className="swiper_container"
                 >
                     {Lcard.map((elem) => {
-                        return <SwiperSlide className='d-flex' style={{
+                        return <SwiperSlide className='swiper-slide d-flex' style={{
                             background: `linear-gradient(to top, black, transparent), url(${elem.poster_path})`
                         }}>
                             <div className='container p-5 d-flex align-items-end'>
-                                <div className='caption d-flex flex-column justify-content-end align-items-start gap-2'>
+                                <div className='caption slider-active d-flex flex-column justify-content-end align-items-start gap-2'>
                                     <img height={"40%"} width={"40%"} src="images/BestOfAllTime.svg" alt="brand logo" />
                                     <h2>{elem.Titlelogo}</h2>
-                                    <div className='w-100 aboutMovie d-flex justify-content-center align-items-start flex-column mb-2 gap-2'>
+                                    <div className='w-100 aboutMovie d-flex justify-content-center align-items-start flex-column mb-2 gap-3'>
                                         <div className='d-flex gap-3'>
                                             <p className='mb-0'>{elem.Genre}</p>
                                             <p className='mb-0'>{elem.Release_Date}</p>
@@ -183,7 +180,7 @@ const HomeSlider = () => {
                         <div className="swiper-pagination"></div>
                     </div>
                 </Swiper>
-            </section>
+            </section >
         </>
     )
 }

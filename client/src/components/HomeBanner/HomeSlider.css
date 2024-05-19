@@ -30,12 +30,25 @@
     border-radius: 20px;
     overflow: hidden;
 }
+.swiper-slide-active{
+    box-shadow: 0px 10px 54px 0px #FFFFFF33;
+    border: 1px solid #FFFFFF
+}
+.swiper-slide-active .slider-active{
+    bottom: -15% !important;
+    opacity: 1 !important;
+}
 
 .swiper-slide .caption {
+    position: relative ;
     height: fit-content;
     max-width: 500px;
     padding: 1rem;
+    bottom: -50%;
+    opacity: 0;
+    transition:  ease-in .5s;
 }
+
 
 .swiper-slide-shadow-left,
 .swiper-slide-shadow-right {
@@ -96,7 +109,7 @@
 }
 
 .aboutMovie p {
-    font-size: 16px;
+    font-size: var(--p3-Paragraph);
     color: var(--light-gray-color);
     font-weight: 400;
     white-space: nowrap;
@@ -115,23 +128,23 @@
     color: var(--text-color);
 }
 
-.caption {
+/* .caption {
     transform: translateY(20%);
     transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) .3s;
-}
+} */
 
 .caption h2 {
     font-family: 'Helvetica Neue', sans-serif;
     font-weight: 800;
     /* font-size: var(--h2-Heading); */
-    font-size: 32px;
+    font-size: var(--h3-Heading);
     margin-bottom: 0;
 }
 
 .caption .movieBtns {
-    max-width: 80%;
+    min-width: 80%;
     transform: translateY(300%);
-    transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) .3s;
+    transition: ease-in .3s;
 }
 
 .caption .movieBtns .mainbtn,
@@ -140,24 +153,22 @@
 }
 
 .caption .movieBtns .mainbtn a svg {
-    font-size: 14px;
+    font-size: var(--p3-Paragraph);
 }
 
-.caption .movieBtns .mainbtnSec {
-    font-size: 30px !important;
-}
 
 .caption .movieBtns .mainbtn a p,
 .caption .movieBtns .mainbtnSec a p {
-    font-size: 14px;
+    font-size: var(--p3-Paragraph);
 }
 
 .swiper-slide:hover .caption .movieBtns {
     transform: translateY(0rem);
 }
 
-.swiper-slide:hover .caption {
-    transform: translateY(0rem);
+.swiper-slide:hover .slider-active{
+    bottom: -6% !important;
+    opacity: 1 !important;
 }
 
 .slider-controler svg {

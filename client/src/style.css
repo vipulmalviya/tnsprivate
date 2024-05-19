@@ -23,17 +23,19 @@ body::-webkit-scrollbar {
 
 :root {
   /* Heading Sizes */
-  --h1-Heading: calc(4rem - 1px);
-  --h2-Heading: calc(3rem - 1px);
-  --h3-Heading: calc(1.8rem - 1px);
-  --h4-Heading: calc(1.5rem - 1px);
-  --h5-Heading: calc(1.5rem - 1px);
-  --h6-Heading: calc(1.25rem - 1px);
+  --h1-Heading: 4rem;
+  --h2-Heading: 3rem;
+  --h3-Heading: 2rem;
 
   /* Text Sizes */
-  --p1-Paragraph: calc(1.25rem );
-  --p2-Paragraph: calc(1.10rem );
-  --p3-Paragraph: calc(0.875rem );
+  --p1-Paragraph: 1.25rem;
+  /* 20px*/
+  --p2-Paragraph: 1rem;
+  /* 16px*/
+  --p3-Paragraph: 0.875rem;
+  /* 14px*/
+  --p4-Paragraph: 0.813rem;
+  /* 13px*/
 
   /* color shades */
   --text-color: #FFFFFF;
@@ -108,7 +110,6 @@ h6 {
 
 p {
   font-size: var(--p3-Paragraph);
-  /* margin-bottom: 0; */
 }
 
 a {
@@ -135,11 +136,10 @@ section {
 /* Craft Your Watchlist */
 
 .pcontainer {
-  min-height: 150px;
+  min-height: 254px;
   width: 100%;
-  background-color: var(--decorate-color);
-  padding: 1rem 3rem;
-  justify-content: space-between !important;
+  background: var(--black-color);
+  padding: 0rem 3rem;
   border-radius: 15px;
 }
 
@@ -148,8 +148,14 @@ section {
   font-family: 'Helvetica Neue', sans-serif;
   font-weight: 800;
   line-height: 2.5rem;
-  letter-spacing: .1rem;
-  color: black;
+  color: var(--text-color);
+}
+
+.pcontainer .mainbtn a  {
+  font-size: var(--p2-Paragraph);
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  color: var(--balck-color);
 }
 
 .SectionLable {

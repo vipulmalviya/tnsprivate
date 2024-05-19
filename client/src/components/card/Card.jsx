@@ -18,7 +18,19 @@ const Card = ({ index, Poster, Title, catagory, watch, btn, onclick, value }) =>
     return (
         <>
             <div onClick={onclick} className="singlecard" key={index}>
-                <img height={"70%"} width={"100%"} src={Poster} alt="" />
+                <div className='cardbg d-flex'
+                    style={{
+                        background: `url(${Poster})`
+                    }}>
+                         <div className='cardsBtn'>{
+                    btn
+                        ? <Button value={value} colorProp={ChangeBtn} onClickprop={btnchange}>
+                            {ChangeBtn ? <>{<MdDone />} Added</> : <>{<img height={"15px"} width={"15px"} src="images/cardsplus.svg" alt="icone"/>} Add to Watchlist</>}
+                        </Button>
+                        : <ButtonSec><LuPencilLine /> Write a Review </ButtonSec>
+                }
+                </div>
+                </div>
                 <div className='movieDetails d-flex justify-content-between flex-column'>
                     <div className=' d-flex justify-content-between'>
                         <span className='position-relative gap-1 h-75  d-flex justify-content-start align-items-start flex-column '>
@@ -29,14 +41,9 @@ const Card = ({ index, Poster, Title, catagory, watch, btn, onclick, value }) =>
                             <img className='mt-1' height={"20px"} src="images/TNS 1.svg" alt="" />
                             <span className="number">{watch}</span>
                         </span>
-                    </div>{
-                        btn
-                            ? <Button value={value} colorProp={ChangeBtn} onClickprop={btnchange}>
-                                {ChangeBtn ? <>{<MdDone />} Added</> : <>{<IoAdd />} Add to Watchlist</>}
-                            </Button>
-                            : <ButtonSec><LuPencilLine /> Write a Review </ButtonSec>
-                    }
+                    </div>
                 </div>
+
             </div>
         </>
     )

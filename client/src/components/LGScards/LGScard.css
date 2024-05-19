@@ -1,0 +1,64 @@
+.LSGcard {
+    min-height: 127px;
+    width: 146px;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: var(--black-color);
+    cursor: pointer;
+}
+.serviceCards {
+    height:95px ;
+    width: 183px;
+    border-radius: 10px;
+    padding: 20px;
+    gap: 2px;
+    cursor: pointer;
+}
+.LSGcard:hover , .serviceCards:hover{
+    border: 1px solid white;
+}
+
+.serviceCards img{
+    height:100% ;
+    width: 100%;
+}
+
+.LSGcard h2 {
+    font-size: var(--h3-Heading);
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    color: var(--decorate-color);
+}
+
+.LSGcard h3 {
+    font-size: var(--p1-Pragraph);
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+
+.cardContainer {
+    width: 100%;
+    position: relative;
+}
+
+.cardContainer::after,
+.cardContainer::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 50px;
+    pointer-events: none;
+}
+
+.cardContainer::before {
+    background: linear-gradient(to left, rgba(18, 18, 18, 0) 0%, #111111 49.5%);
+    left: -2rem;
+    z-index: 1;
+}
+
+.cardContainer::after {
+    background: linear-gradient(to right, rgba(18, 18, 18, 0) 0%, #111111 49.5%);
+    right: 0%;
+}

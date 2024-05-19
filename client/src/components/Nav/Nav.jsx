@@ -190,7 +190,7 @@ const Nav = ({ setQuery, query }) => {
                                 <img height={"100%"} width={"100%"} src="public/images/watchlistplus.svg" alt="watchlist plus icone" />
                                 <p>My Watchlist</p>
                             </div>
-                            <img data-toggle="tooltip" title="My Profile" height={"3%"} width={"3%"} src="images/Ellipse 33.svg" alt="" />
+                            <img data-toggle="tooltip" title="My Profile" height={"35px"} width={"35px"} src="images/Ellipse 33.svg" alt="" />
                             <div className="hamburgur" onClick={NavFunc} >
                                 <img height={"30px"} width={"30px"} src="images/menu-alt-1.svg" alt="" />
                             </div>

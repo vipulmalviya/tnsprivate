@@ -1,4 +1,4 @@
-.singlecard {
+/* .singlecard {
     min-height: 300px;
     max-width: 280px;
     padding: 1rem;
@@ -29,7 +29,7 @@
 
 .movieDetails h4 {
     font-family: 'Helvetica Neue', sans-serif;
-    letter-spacing: .1rem;
+    font-size: var(--p1-Paragraph);
     width: 100%;
     text-overflow: ellipsis;
     margin-bottom: 0;
@@ -109,4 +109,4 @@
         color: #D9D9D9;
     }
 
-}
+} */
