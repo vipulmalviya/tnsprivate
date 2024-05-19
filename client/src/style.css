@@ -1,0 +1,1793 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap'); */
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+
+html,
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background: var(--dark-background-color);
+  height: 100%;
+  width: 100%;
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  /* Heading Sizes */
+  --h1-Heading: calc(4rem - 1px);
+  --h2-Heading: calc(3rem - 1px);
+  --h3-Heading: calc(1.8rem - 1px);
+  --h4-Heading: calc(1.5rem - 1px);
+  --h5-Heading: calc(1.5rem - 1px);
+  --h6-Heading: calc(1.25rem - 1px);
+
+  /* Text Sizes */
+  --p1-Paragraph: calc(1.25rem );
+  --p2-Paragraph: calc(1.10rem );
+  --p3-Paragraph: calc(0.875rem );
+
+  /* color shades */
+  --text-color: #FFFFFF;
+  --black-color: black;
+  --background-color: #171910;
+  --dark-background-color: #111111;
+  --decorate-color: #BACC4A;
+  --light-decorate-color: #E6F1B9;
+  --light-gray-color: #D9D9D9;
+  --nav-bg-color: #282829;
+
+  /* spacing Between sections */
+  --s-tb: 5.375rem;
+
+  /* spacing Between sections and heading */
+  --h-tb: 6.25rem;
+}
+
+/* For mobile devices */
+@media only screen and (max-width: 768px) {
+  :root {
+    --h1-Heading: 2rem;
+    --h2-Heading: 1.875rem;
+    --h3-Heading: 1.5rem;
+    --h4-Heading: 1.25rem;
+    --h5-Heading: 1.22rem;
+    --h6-Heading: 0.875rem;
+
+
+    /* Text Sizes */
+    --p1-Paragraph: 1rem;
+    --p2-Paragraph: 0.875rem;
+    --p3-Paragraph: 0.75rem;
+
+    --s-tb: 4.375rem;
+    --h-tb: 1.875rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  :root {
+    --s-tb: 3.375rem;
+    --h-tb: 1.875rem;
+  }
+}
+
+
+h1 {
+  font-size: var(--h1-Heading);
+  margin-bottom: var(--h-tb);
+}
+
+h2 {
+  font-size: var(--h2-Heading);
+}
+
+h3 {
+  font-size: var(--h3-Heading);
+}
+
+h4 {
+  font-size: var(--h4-Heading);
+}
+
+h5 {
+  font-size: var(--h5-Heading);
+}
+
+h6 {
+  font-size: var(--h6-Heading);
+}
+
+p {
+  font-size: var(--p3-Paragraph);
+  /* margin-bottom: 0; */
+}
+
+a {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--dark-background-color);
+}
+
+
+section {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.288);
+  padding: var(--s-tb) 0 !important;
+  /* background: green; */
+}
+
+
+.container {
+  max-width: 1700px !important;
+  background: transparent;
+}
+
+
+/* Craft Your Watchlist */
+
+.pcontainer {
+  min-height: 150px;
+  width: 100%;
+  background-color: var(--decorate-color);
+  padding: 1rem 3rem;
+  justify-content: space-between !important;
+  border-radius: 15px;
+}
+
+.pcontainer h2 {
+  font-size: var(--h3-Heading);
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 800;
+  line-height: 2.5rem;
+  letter-spacing: .1rem;
+  color: black;
+}
+
+.SectionLable {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 800;
+  color: var(--text-color);
+  font-size: var(--h3-Heading);
+  cursor: pointer;
+  display: flex;
+  align-items: end;
+  margin-bottom: 2rem;
+  /* letter-spacing: .1rem; */
+}
+
+/* login page css */
+
+.Logindiv {
+  color: var(--text-color);
+}
+
+.Lleft {
+  width: 100%;
+  height: 100%;
+  align-items: flex-start !important;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.Lleft hr {
+  width: 100%;
+}
+
+.Rform {
+  flex-direction: column;
+  align-items: flex-start !important;
+  width: 100%;
+  padding: 2rem 0 0 0;
+  color: var(--text-color);
+  gap: 5px;
+}
+
+
+
+.hinglight {
+  color: var(--decorate-color);
+}
+
+.Rleft p {
+  margin-bottom: 2rem;
+  font-size: var(--p2-Paragraph);
+}
+
+.Rleft li {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .Rleft li span {
+  font-size: var(--p2-Paragraph);
+  font-family: "Inter" sans-serif;
+  font-weight: 500;
+} */
+
+.Rleft img {
+  margin-right: 1rem;
+}
+
+.Rfooter span {
+  cursor: pointer;
+}
+
+.passwordinput svg {
+  font-size: 1.2rem;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* ragister page css  */
+/* left css */
+
+
+.ragisterdiv {
+  min-height: 100vh;
+  width: 100vw;
+  background: var(--nav-bg-color);
+}
+
+.ragisterdiv .Rleft {
+  color: var(--text-color);
+  width: 60%;
+  align-items: flex-start !important;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 1;
+}
+
+.ragisterdiv .Rleft li span {
+  font-size: var(--p2-Paragraph);
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+}
+
+/* right css */
+.ragisterdiv .Rright {
+  color: var(--text-color);
+  z-index: 9 !important;
+  backdrop-filter: blur(20px);
+  width: 40%;
+  padding: 0 6rem;
+  align-items: flex-start !important;
+  flex-direction: column;
+  border-left: .2px solid rgba(255, 255, 255, 0.454);
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) .3s;
+}
+
+/* form css */
+.Rform {
+  flex-direction: column;
+  align-items: flex-start !important;
+  width: 100%;
+  color: var(--text-color);
+  gap: 5px;
+}
+
+.Rform input {
+  color: var(--text-color);
+  background: transparent;
+  border: .5px solid var(--light-gray-color);
+  width: 100%;
+  height: 45px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.Rform input:focus {
+  outline-color: var(--text-color);
+  outline-width: .5px !important;
+  outline-style: groove;
+}
+
+.Rform label {
+  /* margin-top: 1rem; */
+  margin-bottom: 0rem;
+  font-size: var(--p1-Paragraph);
+  color: var(--light-gray-color);
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+}
+
+.Rleft .hinglight {
+  font-size: var(--h1-Heading);
+  margin-bottom: 1rem;
+  letter-spacing: .1rem;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 800;
+}
+
+
+.subhadding {
+  font-size: var(--h3-Heading);
+  font-family: 'Helvetica Neue', sans-serif;
+  letter-spacing: .1rem;
+  font-weight: 800;
+  margin-bottom: 0;
+}
+
+.Rright>p {
+  font-size: var(--p2-Paragraph);
+  color: var(--light-gray-color);
+  opacity: .8;
+  margin-bottom: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+}
+
+.Rleft p {
+  margin-bottom: 2rem;
+  font-size: var(--p1-Paragraph);
+}
+
+.Rleft li {
+  display: flex;
+  list-style: none;
+  align-items: center !important;
+  justify-content: center;
+}
+
+.Rleft img {
+  margin-right: 1rem;
+}
+
+/* switchbtn css */
+.switchbtn {
+  margin: 1.2rem 0;
+  text-align: center;
+}
+
+.switch {
+  align-items: center;
+  justify-content: center;
+}
+
+.switch input {
+  display: none;
+}
+
+.switch label {
+  margin-right: 1rem;
+  margin-top: 0rem;
+  margin-bottom: 0;
+  position: relative;
+  width: 50px;
+  height: 25px;
+  border-radius: 15px;
+  border: 1.5px solid #ffffff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.switch label::after {
+  content: url("../public/images/Frame 556.svg");
+  position: absolute;
+  left: 5%;
+  top: 55%;
+  transform: translate(0%, -50%);
+  width: 35%;
+  height: 100%;
+  /* border-radius: 1px; */
+  transition: 0.3s;
+}
+
+.switch input:checked~label {
+  /* border-color: #ffffff; */
+  background-color: var(--decorate-color);
+}
+
+
+.switch input:checked~label::after {
+  translate: 25px 0;
+  /* background: #ffffff; */
+}
+
+.switch input:disabled~label {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.switch p {
+  font-size: var(--p2-Paragraph);
+  line-height: 1;
+  text-align: start;
+  margin-bottom: 0;
+}
+
+.Rfooter p {
+  margin-bottom: 0;
+  font-size: var(--p2-Paragraph);
+}
+
+.Rfooter a {
+  margin-bottom: 0;
+  font-size: var(--p2-Paragraph);
+}
+
+.Rfooter span {
+  cursor: pointer;
+}
+
+.Rright .mainbtn,
+.Rright .mainbtnSec {
+  width: 100% !important;
+}
+
+.Rright .mainbtnSec {
+  border: 1px solid var(--text-color);
+}
+
+.Rright .mainbtnSec span {
+  color: var(--text-color);
+}
+
+
+/* login page css */
+
+.logindiv {
+  min-height: 100vh;
+  width: 100vw;
+  border: none;
+}
+
+.loginmaindiv {
+  position: relative;
+  width: 100%;
+}
+
+.loginmaindiv section {
+  width: 100%;
+  height: 100%;
+  padding: 0 !important;
+  border: none;
+}
+
+.loginmaindiv .CuratedCards {
+  width: 100%;
+}
+
+.loginformdiv {
+  position: absolute;
+  right: 0%;
+  top: 0;
+  height: 100%;
+  width: 40%;
+  background-color: #1e1e1e40;
+  z-index: 9 !important;
+  backdrop-filter: blur(20px);
+  padding: 4rem 10rem;
+  border-left: .2px solid rgba(255, 255, 255, 0.454);
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) .3s;
+
+}
+
+.open2 {
+  position: absolute;
+  right: -100% !important;
+  top: 0%;
+}
+
+.loginformdiv p {
+  font-size: var(--p1-Paragraph);
+  font-family: "Inter" sans-serif;
+  font-weight: 400;
+  color: var(--light-gray-color);
+}
+
+.loginformdiv form label {
+  font-size: var(--p1-Paragraph);
+  font-family: "Inter" sans-serif;
+  font-weight: 500;
+}
+
+.loginformdiv .mainbtn {
+  width: 100% !important;
+  margin-top: 1rem;
+}
+
+.loginformdiv .mainbtn a {
+  font-size: var(--p1-Paragraph) !important;
+}
+
+
+.loginformdiv .mainbtnSec {
+  border: 1px solid var(--text-color);
+  margin-bottom: 1rem;
+  width: 100% !important;
+}
+
+.loginformdiv .mainbtnSec a {
+  color: var(--text-color);
+  font-size: var(--p2-Paragraph) !important;
+}
+
+
+
+/* watchlist page */
+.headersection {
+  padding-top: 4rem !important;
+  color: white;
+  border-bottom: .5px solid rgba(128, 128, 128, 0.597);
+}
+
+.header {
+  justify-content: flex-start !important;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  align-items: center;
+}
+
+.header h2 {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 800;
+  font-size: var(--h3-Heading) !important;
+  margin-bottom: 0;
+}
+
+.header p {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  font-size: var(--p2-Paragraph) !important;
+  font-weight: 400;
+}
+
+.watchlistbtn {
+  cursor: pointer;
+}
+
+.watchlistbtn svg {
+  font-size: 3rem;
+  color: var(--decorate-color);
+}
+
+.watchlistbtn svg path {
+  stroke-width: 15;
+}
+
+.watchlistCard {
+  position: relative;
+  /* min-height: 50vh; */
+  max-width: 49%;
+  padding: 2rem;
+  border-radius: 25px;
+  background-color: #282829;
+  border: 1px solid rgba(255, 255, 255, 0.143);
+}
+
+.watchlistCard h3 {
+  font-size: var(--h4-Heading);
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 800;
+}
+
+.titlecount {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: var(--p3-Paragraph);
+  font-weight: 800;
+}
+
+.cardContainer {
+  width: 100%;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.cardContainer .card {
+  height: 348px;
+  /* width: 100%; */
+  margin: .5rem;
+  border-radius: 10px;
+  background-position: center;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+.watchlistCards {
+  gap: 2rem;
+  width: 100%;
+  margin: 2rem 0 0 0;
+}
+
+.progress {
+  width: 100%;
+  height: 7px;
+  margin: 1rem 0 0 0;
+}
+
+.cardHeaders {
+  justify-content: space-between !important;
+  padding: 0 1rem 1rem 0rem;
+}
+
+.cardHeaders h3 {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 800;
+  font-size: var(--h3-Heading);
+}
+
+.singlecard .movieDetails .mainbtnSec {
+  width: 100% !important;
+}
+
+.singlecard .movieDetails .mainbtnSec a {
+  color: var(--decorate-color);
+}
+
+
+/* single movie page  */
+
+.Movieposter {
+  height: 100vh;
+  width: 100vw;
+  background-position: center !important;
+  background-size: cover !important;
+}
+
+.singleSection {
+  margin-top: -11rem;
+}
+
+.movieContianer {
+  position: relative;
+  min-height: 80vh;
+}
+
+.Sleft {
+  position: relative;
+  padding: 1rem;
+  width: 70%;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.trailerCard {
+  position: relative;
+  min-height: 400px;
+  max-width: 300px;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.trailerCard .imgbox {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+}
+
+.trailerCard .imgbox img {
+  border-radius: 10px;
+}
+
+.trailerCard .mainbtn {
+  width: 100% !important;
+}
+
+
+.trailerCard .mainbtnSec:nth-child(3) {
+  border: 1px solid var(--decorate-color) !important;
+  width: 100% !important;
+}
+
+.trailerCard .mainbtnSec:nth-child(4) {
+  border: 1px solid #1ED760 !important;
+  background-color: #1ed75f0e;
+  width: 100% !important;
+}
+
+.trailerCard .mainbtnSec:nth-child(4) a>* {
+  color: #1ED760 !important;
+}
+
+.aboutMovies {
+  padding: 1rem;
+  height: 100%;
+  /* gap: 2rem; */
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+}
+
+.aboutMoviesContainer {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.179);
+}
+
+.Details h3,
+.Plot h3 {
+  font-size: var(--h4-Heading);
+  margin-bottom: 1rem;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 800;
+  color: var(--decorate-color);
+}
+
+.Details {
+  /* margin: 2rem 0; */
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.179);
+  /* gap: 1rem; */
+  align-items: flex-start !important;
+  flex-direction: column;
+}
+
+.Plot {
+  /* margin: 2rem 0; */
+  padding: 2rem 0;
+}
+
+.Details div {
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.aboutMovies .movieTitle img {
+  width: 300px;
+  /* margin-bottom: 1rem; */
+}
+
+.aboutMoviesContainer .movieReales {
+  padding-top: 1rem;
+  gap: 3rem;
+}
+
+.aboutMoviesContainer .movieReales p {
+  font-size: var(--p2-Paragraph);
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  color: var(--light-gray-color);
+}
+
+.movieReales .MovieTag {
+  border-radius: 5px;
+  border: 1px solid white;
+  padding: .2rem .8rem;
+}
+
+.key {
+  font-size: var(--p2-Paragraph);
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  color: var(--light-gray-color) !important;
+}
+
+.value {
+  margin-bottom: 0;
+  font-size: var(--p2-Paragraph);
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  color: var(--text-color) !important;
+}
+
+.Sright {
+  position: relative;
+  padding: 1rem;
+  width: 35%;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.Sright>.movieScore {
+  position: relative;
+  min-height: 250px;
+  background-color: #BBCD4A17;
+  border: 1px solid var(--decorate-color);
+  border-radius: 25px;
+  gap: 2rem;
+}
+
+.aboutTns>h4,
+.UserRiviews>h4 {
+  font-size: var(--p1-Paragraph);
+  /* margin-bottom: 1rem; */
+}
+
+.aboutTns>a,
+.UserRiviews>a {
+  font-size: var(--p2-Paragraph);
+  color: var(--decorate-color) !important;
+  text-decoration: underline !important;
+}
+
+.tnslogo,
+.UserIcone {
+  margin: 1rem;
+  width: fit-content;
+}
+
+.tnsScore,
+.UserRiview {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 800;
+  font-size: var(--h3-Heading);
+  margin-bottom: 0 !important;
+}
+
+.Alluser {
+  min-height: 400px;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid rgba(255, 255, 255, 0.162);
+  border-radius: 25px;
+  margin-top: 2rem;
+  padding: 2rem 5rem;
+}
+
+.usercard {
+  margin-top: 1rem;
+}
+
+.usercard img {
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.userDetails {
+  align-items: flex-start !important;
+}
+
+.userDetails p {
+  font-size: var(--p2-Paragraph) !important;
+  margin-bottom: 0;
+  color: var(--decorate-color);
+}
+
+.userDetails h4 {
+  font-size: var(--p1-Paragraph) !important;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.viewAll {
+  position: absolute;
+  color: var(--decorate-color);
+  top: 50px;
+  right: 50px;
+  text-decoration: underline;
+}
+
+
+.movierating {
+  min-height: 30vh;
+  width: 100%;
+  position: relative;
+  padding: 0rem 0 2rem 0;
+}
+
+.movierating h3 {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 800;
+}
+
+.rating-stars {
+  display: block;
+  position: relative;
+}
+
+.ratingContainer {
+  width: 65%;
+}
+
+.ratingContainer>div h4 {
+  font-size: var(--p1-Paragraph);
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+}
+
+.rating-counter {
+  font-size: var(--p1-Paragraph);
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 800;
+  color: var(--text-color);
+  width: 10px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  right: -10%;
+  transform: translate(-50%, -50%)
+}
+
+.rating-counter:before {
+  content: "0";
+  /* transition: all 0.25s ease 0s; */
+}
+
+.rating-stars input {
+  display: none;
+}
+
+.movierating label {
+  width: 20px;
+  height: 20px;
+  background: #000b;
+  display: inline-flex;
+  cursor: pointer;
+  margin: 0.5vmin 0.65vmin;
+  /* transition: all 1s ease 0s; */
+  clip-path: polygon(50% 0%, 66% 32%, 100% 38%, 78% 64%, 83% 100%, 50% 83%, 17% 100%, 22% 64%, 0 38%, 34% 32%);
+}
+
+.movierating label[for=rs0] {
+  display: none;
+}
+
+.movierating label:before {
+  width: 100%;
+  height: 90%;
+  content: "";
+  background: var(--decorate-color);
+  z-index: -1;
+  display: block;
+  /* margin-left: 5%; */
+  margin-top: 5%;
+  clip-path: polygon(50% 0%, 66% 32%, 100% 38%, 78% 64%, 83% 100%, 50% 83%, 17% 100%, 22% 64%, 0 38%, 34% 32%);
+  background-size: 205% 100%;
+  background-position: 0 0;
+}
+
+
+input:checked+.movierating label~.movierating label:before {
+  background-position: 100% 0;
+}
+
+input:checked+.movierating label~.movierating label:hover:before {
+  background-position: 0% 0
+}
+
+#rs1:checked~.rating-counter:before {
+  content: "1";
+}
+
+#rs2:checked~.rating-counter:before {
+  content: "2";
+}
+
+#rs3:checked~.rating-counter:before {
+  content: "3";
+}
+
+#rs4:checked~.rating-counter:before {
+  content: "4";
+}
+
+#rs5:checked~.rating-counter:before {
+  content: "5";
+}
+
+#rs6:checked~.rating-counter:before {
+  content: "6";
+}
+
+#rs7:checked~.rating-counter:before {
+  content: "7";
+}
+
+#rs8:checked~.rating-counter:before {
+  content: "8";
+}
+
+#rs9:checked~.rating-counter:before {
+  content: "9";
+}
+
+#rs10:checked~.rating-counter:before {
+  content: "10";
+}
+
+.movierating label+input:checked~.rating-counter:before {
+  color: #ffab00 !important;
+}
+
+.movierating label[for=rs1]:hover~.rating-counter:before {
+  content: "1" !important;
+}
+
+.movierating label[for=rs2]:hover~.rating-counter:before {
+  content: "2" !important;
+}
+
+.movierating label[for=rs3]:hover~.rating-counter:before {
+  content: "3" !important;
+}
+
+.movierating label[for=rs4]:hover~.rating-counter:before {
+  content: "4" !important;
+}
+
+.movierating label[for=rs5]:hover~.rating-counter:before {
+  content: "5" !important;
+}
+
+.movierating label[for=rs6]:hover~.rating-counter:before {
+  content: "6" !important;
+}
+
+.movierating label[for=rs7]:hover~.rating-counter:before {
+  content: "7" !important;
+}
+
+.movierating label[for=rs8]:hover~.rating-counter:before {
+  content: "8" !important;
+}
+
+.movierating label[for=rs9]:hover~.rating-counter:before {
+  content: "9" !important;
+}
+
+.movierating label[for=rs10]:hover~.rating-counter:before {
+  content: "10" !important;
+}
+
+input:checked:hover~.rating-counter:before {
+  color: #ffab00 !important;
+}
+
+.left {
+  gap: 1rem;
+  width: 50%;
+  align-items: flex-start !important;
+}
+
+.left h3 {
+  color: var(--decorate-color);
+  font-size: var(--h4-Heading);
+}
+
+.leftT a {
+  color: var(--decorate-color) !important;
+  text-decoration: underline !important;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+}
+
+.score {
+  font-size: var(--h2-Heading);
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 800;
+  margin: 0rem 1rem 0 0;
+}
+
+.right {
+  width: 50%;
+  gap: 2rem;
+  align-items: flex-start !important;
+}
+
+.right>div {
+  /* align-items: flex-start !important; */
+  gap: 1rem;
+}
+
+.right>p {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 200;
+  font-size: var(--p2-Paragraph);
+  color: var(--light-gray-color);
+  line-height: 2rem;
+}
+
+.right>.mainbtnSec {
+  width: fit-content;
+  color: var(--decorate-color) !important;
+  border-color: var(--decorate-color);
+}
+
+.right>.mainbtnSec a {
+  color: var(--decorate-color) !important;
+}
+
+
+
+/* single curated list page  */
+
+.Curated_banner {
+  min-height: 100vh;
+  width: 100%;
+  background-position: center !important;
+  position: relative;
+  background-repeat: no-repeat;
+}
+
+.Curated_banner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(49, 48, 48, 0.612));
+  z-index: 1;
+  pointer-events: none;
+  filter: blur(25px);
+}
+
+.Curated_movie_details {
+  bottom: 8%;
+  left: 5%;
+  position: absolute;
+  max-width: 1000px;
+  padding: 2rem;
+  color: var(--text-color) !important;
+  /* gap: .5rem; */
+  /* align-items: flex-start !important; */
+}
+
+.Curated_movie_details h2 {
+  /* font-size: var(--h2-Heading) ; */
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 800;
+}
+
+.Curated_movie_details p {
+  font-size: var(--p1-Paragraph);
+}
+
+.tag {
+  color: black;
+  background-color: var(--decorate-color);
+  padding: 3px 6px;
+  width: fit-content;
+  border-radius: 5px;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 800;
+}
+
+.Curated_list_Container {
+  width: 100%;
+  height: 100%;
+  padding: 4rem 2rem;
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.233); */
+}
+
+.Curated_list_Container .imgbox {
+  height: auto;
+}
+
+.Curated_list_Container .number_div {
+  font-size: var(--h1-Heading);
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 800;
+  align-self: flex-start;
+  margin-right: 1rem;
+}
+
+.Curated_list_Container .center_div {
+  width: 80% !important;
+  padding: 0 !important;
+}
+
+.Curated_list_Container .center_div>.Sleft {
+  width: fit-content !important;
+  padding: 0 !important;
+}
+
+.Curated_list_Container .center_div .Sleft .aboutMovies .Details {
+  gap: 0rem !important;
+}
+
+.Curated_list_Container .ratting_div {
+  width: 30%;
+}
+
+.Curated_list_Container .ratting_div .movieScore {
+  row-gap: 2rem;
+  height: 80%;
+}
+
+.Curated_list_Container .ratting_div .movieScore .aboutTns>div {
+  gap: 2rem;
+  text-align: center !important;
+}
+
+.rating_reviews {
+  text-align: center !important;
+  position: relative;
+}
+
+.rating_reviews::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  left: -20px;
+  background-color: var(--light-gray-color);
+
+}
+
+.tnsScore_user {
+  font-size: var(--p3-Paragraph);
+  color: var(--text-color) !important;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 800;
+}
+
+.buttonDiv {
+  gap: 1rem;
+}
+
+.ratting_div .aboutTns h4 {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 800;
+  color: var(--decorate-color);
+}
+
+.buttonDiv h4 {
+  font-size: var(--p1-Paragraph);
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 800;
+  align-self: flex-start;
+  color: var(--decorate-color);
+}
+
+
+.buttonDiv .mainbtn {
+  width: 100% !important;
+}
+
+
+.buttonDiv .mainbtnSec p {
+  margin-bottom: 0;
+  font-size: var(--p3-Paragraph);
+}
+
+.buttonDiv .mainbtnSec:nth-child(3) {
+  border: 1px solid var(--decorate-color) !important;
+  justify-content: center;
+  color: var(--decorate-color) !important;
+  margin-top: 0;
+  margin-bottom: 0;
+  gap: 1rem;
+}
+
+/* category page */
+.categoryCardSection {
+  padding: 0 !important;
+  height: 10vh;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.288);
+}
+
+.innerContianer {
+  width: 90%;
+  height: 10vh;
+}
+
+.categoryCardSection .dropdown .dropdown-toggle h6 {
+  color: black !important;
+  margin: 0 !important;
+}
+
+.Categorybtns {
+  white-space: nowrap;
+  font-size: var(--p1-Paragraph);
+  font-family: "Itren", sans-serif;
+  color: white;
+  height: 46px;
+  padding: 0rem 37px;
+  width: fit-content;
+  border: 1px solid var(--light-gray-color);
+  border-radius: 10px;
+  background: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.Active {
+  background: var(--decorate-color) !important;
+  color: black !important;
+  border: none;
+}
+
+.categoryCardSection .dropdown .dropdown-menu {
+  position: absolute !important;
+  transform: translate(-0px, 50px) !important;
+  background: var(--dark-background-color) !important;
+}
+
+
+.categoryCardSection .dropdown .dropdown-item svg {
+  margin-right: .5rem;
+}
+
+.categoryCardSection .dropdown .dropdown-item {
+  font-weight: 200;
+  font-size: var(--p1-Paragraph);
+  color: var(--text-color);
+}
+
+.categoryCardSection .dropdown .dropdown-item:hover {
+  font-weight: 200;
+  font-size: var(--p1-Paragraph);
+  color: var(--text-color);
+  background: var(--background-color);
+}
+
+
+
+.innerContianer .react-multi-carousel-item {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  width: fit-content !important;
+  margin: 0 .5rem;
+}
+
+
+.categoryCardSection .dropdown>.dropdown-toggle {
+  white-space: nowrap;
+  color: white;
+  min-height: 30px;
+  padding: .5rem 1rem;
+  width: fit-content;
+  border: 1px solid var(--light-gray-color);
+  border-radius: 10px;
+  border: none;
+  text-transform: capitalize;
+}
+
+
+
+.innerContianer .react-multi-carousel-track {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  will-change: transform, transition;
+  align-items: center;
+}
+
+.breadcrumb {
+  display: block;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+}
+
+.breadcrumb h3>span {
+  color: var(--decorate-color);
+}
+
+.breadcrumb p>span {
+  color: var(--decorate-color);
+}
+
+.cardsitems {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  overflow: hidden !important;
+  /* grid-template-rows: repeat(4,1fr); */
+}
+
+
+
+
+.pagination .page-item .page-link {
+  background: transparent;
+  color: var(--text-color);
+}
+
+.active>.page-link {
+  background: var(--decorate-color) !important;
+  color: black !important;
+}
+
+.page-item svg {
+  margin-bottom: .2rem;
+}
+
+.page-item {
+  border-radius: 20px;
+}
+
+.page-item .page-link {
+  border-radius: 10px !important;
+  border: 1px solid #FFFFFF33 !important;
+}
+
+
+
+/* searchpage css */
+
+.pageTitle {
+  font-size: var(--p1-Paragraph);
+  font-family: "inter" sans-serif;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+
+
+
+/* responsive code */
+@media screen and (max-width: 1860px) and (min-width: 1280px) {
+  .container {
+    max-width: 1400px !important;
+  }
+}
+
+/* big screen  */
+@media screen and (min-width:1024px) {
+  .Rright {
+    padding: 2rem;
+  }
+}
+
+/* tablets screen  */
+@media screen and (max-width:1024px) and (min-width:768px) {
+  .ragisterdiv .Rright {
+    padding: 2rem;
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+  }
+
+  .ragisterdiv .Rleft {
+    padding: 2rem;
+    width: 100vw;
+  }
+
+  .loginformdiv {
+    padding: 2rem;
+    width: 100vw;
+  }
+
+  .watchlistCards {
+    flex-direction: column;
+  }
+
+  .watchlistCards>.watchlistCard {
+    width: 100%;
+  }
+
+
+  .singleSection {
+    margin-top: 0;
+  }
+
+  .movieContianer {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .Sleft,
+  .Sright {
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .Sright>.movieScore {
+    justify-content: space-around !important;
+  }
+
+  .movierating {
+    padding: 2rem;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .aboutMoviesContainer {
+    padding-bottom: 0rem !important;
+  }
+
+  .aboutMoviesContainer .movieReales {
+    gap: .5rem !important;
+  }
+
+  .right,
+  .left {
+    width: 100%;
+  }
+
+  .Curated_list_Container .center_div,
+  .ratting_div {
+    width: 100% !important;
+  }
+
+
+  .Curated_list_Container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .Curated_list_Container .center_div {
+    width: 100%;
+  }
+
+  .Curated_list_Container .center_div .Sleft {
+    width: 100%;
+  }
+
+  .Curated_list_Container .center_div .Sleft .aboutMovies {
+    padding: 1rem;
+  }
+
+  .Curated_list_Container .ratting_div {
+    width: 100%;
+  }
+
+  .Curated_list_Container .ratting_div .movieScore {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .cardsitems {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+
+}
+
+/* tablets screen  */
+/* @media screen and (min-width:768px) {} */
+
+/* mobiles screen  */
+
+@media screen and (max-width:428px) {
+
+  .ragisterdiv .Rleft {
+    padding: 1rem;
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+  }
+
+  .ragisterdiv .Rright {
+    padding: 1rem;
+    width: 100vw;
+  }
+
+  .loginformdiv {
+    padding: 1rem;
+    width: 100vw;
+  }
+
+  .SectionLable svg {
+    display: none;
+  }
+
+  .Curated_movie_details {
+    left: 0;
+    padding: 1rem;
+  }
+
+  .Curated_list_Container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .Curated_list_Container,
+  .movieReales {
+    gap: 1rem !important;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .aboutMoviesContainer {
+    padding-bottom: 1rem;
+  }
+
+  .Curated_list_Container .center_div,
+  .ratting_div {
+    width: 100% !important;
+  }
+
+
+  .aboutMovie p {
+    margin-right: 2rem;
+  }
+
+  .Sleft,
+  .Sright {
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+    align-items: center;
+  }
+
+  .trailerCard,
+  .aboutMovies {
+    width: 100%;
+  }
+
+  .aboutMovies {
+    padding: 0rem;
+  }
+
+  .movieScore,
+  .Alluser {
+    padding: 1rem;
+  }
+
+  .movierating {
+    padding: 1rem;
+    flex-direction: column;
+  }
+
+  .leftT {
+    flex-direction: row !important;
+  }
+
+  .movieContianer {
+    flex-direction: column;
+  }
+
+  .movieContianer .Sleft {
+    padding: 0;
+  }
+
+  .movierating,
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  .movierating,
+  .left>div {
+    flex-direction: column;
+  }
+
+  .viewAll {
+    top: 30px;
+    right: 30px;
+  }
+
+  .ratingContainer {
+    flex-direction: column;
+    margin-bottom: 3rem;
+  }
+
+  .ratingContainer>div {
+    flex-direction: column;
+  }
+
+  .movieScore {
+    flex-direction: column;
+  }
+
+  .cardHeaders {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .Rleft {
+    padding: 3rem 1rem;
+  }
+
+  .Rright {
+    padding: 4rem 1rem 1rem;
+    width: 100vw;
+  }
+
+  .Rform {
+    padding-top: 0rem !important;
+    gap: 0;
+  }
+
+  .switchbtn {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    justify-content: flex-start;
+  }
+
+  .pcontainer {
+    flex-direction: column;
+  }
+
+  .pcontainer h2 {
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .movieBtns {
+    flex-direction: column;
+  }
+
+  .homeCarousel .Caption {
+    width: 100%;
+    bottom: 10%;
+    left: 0%;
+    /* transform: translate(0% , -10%); */
+  }
+
+  .watchlistCards {
+    flex-direction: column;
+  }
+
+  .watchlistCards .watchlistCard {
+    width: 100%;
+  }
+
+  .carousel-control-next,
+  .carousel-control-prev {
+    display: none;
+  }
+
+  .number_div {
+    padding: 2rem 0;
+  }
+
+  .Curated_list_Container .ratting_div .aboutTns {
+    width: 100%;
+  }
+
+  .Curated_list_Container .ratting_div .aboutTns>div {
+    justify-content: space-between !important;
+  }
+
+  .Curated_list_Container .ratting_div .movieScore {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0;
+  }
+
+  .Curated_list_Container .ratting_div .buttonDiv {
+    flex-direction: column;
+    justify-content: flex-start !important;
+    width: 100%;
+  }
+
+  .pcontainer {
+    padding: 1rem;
+  }
+
+  .pcontainer h2 {
+    font-size: var(--h4-Heading);
+    text-align: start;
+    line-height: normal;
+  }
+
+  .movieposter {
+    background-position: center !important;
+    background-size: cover !important;
+  }
+
+  .cardsitems {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cardsitems .singlecard {
+    max-width: 100% !important;
+    margin: 1.5rem 0;
+    padding: 0 .5rem !important;
+  }
+}
+
+@media screen and (max-width:427px) and (min-width:300px) {
+  .cardsitems {
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+  .categoryCardSection {
+    height: 100px;
+  }
+}

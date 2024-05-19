@@ -1,0 +1,384 @@
+header {
+    position: sticky !important;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background-color: var(--nav-bg-color);
+    height: 70px;
+    z-index: 10;
+    border-bottom: 1px solid #FFFFFF33;
+}
+
+nav {
+    width: 100%;
+    height: 100%;
+    justify-content: space-between !important;
+}
+
+nav .left {
+    justify-content: flex-start;
+    align-items: center;
+    width: 30%;
+}
+
+.navM {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.navM form {
+    padding: .5rem 1.5rem;
+    position: relative;
+    border: 1.5px solid #c2bebe5a;
+    color: var(--text-color);
+    outline: none;
+    border-radius: 25px;
+    background-color: #0e0e1038;
+    width: 450px;
+}
+
+.navM form svg {
+    font-size: 1.2rem;
+    stroke-width: .6px;
+    left: 5%;
+    cursor: pointer;
+    color: var(--decorate-color);
+}
+
+.navM input {
+    color: var(--text-color);
+    font-size: var(--p2-Paragraph);
+    border: none;
+    outline: none;
+    width: 100%;
+    background: transparent;
+}
+
+.navM input::placeholder {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.watchlistDiv {
+    position: relative;
+    gap: 2rem;
+    color: var(--text-color);
+    font-family: 'Helvetica Neue', sans-serif;
+    cursor: pointer;
+}
+
+.watchlistDiv p {
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 15px;
+    margin: 0;
+}
+
+.watchlistDiv svg {
+    transform: rotate(271deg);
+    color: var(--decorate-color);
+    font-size: 1.4rem;
+}
+
+.hamburgur {
+    cursor: pointer;
+    color: white;
+    font-size: 1rem;
+    width: fit-content !important;
+}
+
+/* side menu css */
+
+.side-menu {
+    position: absolute;
+    top: 80px;
+    right: -100%;
+    height: 100vh;
+    width: 26.67vw;
+    background: #282829 !important;
+    transition: all ease-in-out .3s;
+}
+
+
+.open {
+    position: absolute;
+    right: 0 !important;
+}
+
+
+.dropdown-menu {
+    position: relative !important;
+    background-color: transparent !important;
+    inset: 0px auto auto 0px !important;
+    margin: 0px !important;
+    border: none !important;
+    transform: translate(0px, 0px) !important;
+}
+
+.side-menu>div {
+    padding-top: 10rem;
+    line-height: 2.5rem;
+}
+
+.dropdown-item svg {
+    color: var(--decorate-color);
+}
+
+.dropdown-item {
+    letter-spacing: .1rem;
+    font-weight: 800;
+    font-size: var(--p1-Paragraph);
+    color: var(--text-color);
+    background-color: none;
+}
+
+.dropdown>.dropdown-toggle {
+    color: var(--decorate-color);
+    background-color: transparent;
+    border: none;
+    line-height: 2.5rem;
+}
+
+.navbar-nav .dropdown-item {
+    color: var(--decorate-color);
+    background-color: transparent;
+    letter-spacing: .1rem;
+    font-weight: 800;
+    border: none;
+    font-size: var(--h5-Heading);
+}
+
+.dropdown>.dropdown-toggle>h2 {
+    color: var(--decorate-color);
+    letter-spacing: .1rem;
+    font-weight: 800;
+    font-size: var(--h5-Heading);
+}
+
+.closebtn {
+    background-color: #bbcc4a2c !important;
+    color: var(--decorate-color);
+    border-radius: 50%;
+    padding: .5rem;
+    position: absolute;
+    top: 5%;
+    right: 16%;
+    height: 35px !important;
+    width: 35px !important;
+    cursor: pointer;
+}
+
+.logoutdiv svg {
+    font-size: 20px;
+    color: var(--decorate-color);
+}
+
+.logoutdiv h6 {
+    color: var(--text-color);
+    letter-spacing: .1rem;
+    font-weight: 800;
+    font-size: var(--h6-Heading);
+}
+
+
+.subHeader {
+    min-height: 70px;
+    background: var(--nav-bg-color);
+}
+
+.subHeader .container {
+    position: relative;
+    width: 100%;
+}
+
+.subHeader .container::after,
+.subHeader .container::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100px;
+    pointer-events: none;
+}
+
+.subHeader .container::before {
+    background: linear-gradient( to right , #282829 0% , #28282900 100%);
+    /* background: red; */
+    left: 0%;
+    z-index: 1;
+}
+
+.subHeader .container::after {
+    background: linear-gradient(to left , #282829 0% , #28282900 100% );
+    right: 0;
+}
+
+.subHeader .container .Categorybtns {
+    border-radius: 70px;
+    background: #FFFFFF1A;
+    border: none;
+    height: 46px;
+    padding: 0rem 20px;
+}
+
+.subHeader .container .at {
+  background: var(--decorate-color);
+  color:var(--black-color);
+}
+
+
+.subHeader .container .Categorybtns span {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.subHeader .container .Categorybtns:hover {
+    background: #FFFFFF4D !important;
+}
+.subHeader .container .at:hover {
+    background: #E7F973 !important;
+}
+
+.subHeader .container .react-multi-carousel-item {
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    width: fit-content !important;
+    margin-right: 5px;
+}
+
+.subHeader .container .react-multi-carousel-track {
+    margin-left: 2rem;
+    height: 100%;
+    align-items: center;
+}
+
+.subHeader .container .react-multiple-carousel__arrow--right {
+    background: var(--nav-bg-color);
+}
+
+.subHeader .container .react-multiple-carousel__arrow--left {
+    background: var(--nav-bg-color);
+}
+
+
+
+
+@media screen and (max-width: 1860px) and (min-width: 1280px) {
+
+    /* .navM {
+        justify-content: center !important;
+    }
+
+    .navM form {
+        padding: .3rem;
+        position: relative;
+        border: 1.5px solid #c2bebe5a;
+        color: var(--text-color);
+        outline: none;
+        border-radius: 10px;
+        background-color: #0e0e1038;
+        width: 450px;
+    }
+
+    .navM form svg {
+        position: static !important;
+        font-size: 25px;
+        left: 5%;
+        cursor: pointer;
+        margin: 0rem 1rem;
+    }
+
+    .navM input {
+        position: static !important;
+        width: 100%;
+        margin: 0 !important;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 18px;
+        color: var(--text-color);
+    } */
+    nav {
+        gap: 5rem;
+    }
+}
+
+@media screen and (max-width:1024px) and (min-width:768px) {
+    .navM input {
+        position: absolute;
+        color: var(--text-color);
+        font-size: var(--p1-Paragraph);
+        border: none;
+        outline: none;
+        padding: 1rem 0rem 1rem 0rem;
+        margin: 0rem 0rem 0rem -2rem;
+        background: transparent;
+    }
+
+    .side-menu {
+        width: 100%;
+    }
+
+    .navM .Watchlist {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 428px) {
+    .side-menu {
+        width: 100vw;
+    }
+
+    .navM {
+        display: none;
+    }
+
+    nav .left {
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .logo img {
+        width: 70px;
+    }
+
+    .Watchlist img {
+        position: relative;
+        width: 30px;
+        height: 30px;
+    }
+
+    .Watchlist p {
+        display: none;
+    }
+
+    .Watchlist::before {
+        position: absolute;
+        content: "My Watchlist";
+        left: 50%;
+        top: 200%;
+        transform: translate(-150%, -50%);
+        height: 100%;
+        width: 100%;
+        white-space: nowrap;
+        opacity: 0;
+        transition: all ease-in .3s;
+    }
+
+    .Watchlist:hover::before {
+        opacity: 1;
+    }
+
+    nav {
+        padding: 0rem 0rem;
+    }
+
+    .hamburgur {
+        cursor: pointer;
+        color: white;
+        font-size: 1rem;
+        width: fit-content !important;
+        margin-right: 1rem;
+    }
+
+}

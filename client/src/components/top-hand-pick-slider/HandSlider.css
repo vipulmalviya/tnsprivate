@@ -1,0 +1,109 @@
+.HandCards {
+    position: relative;
+    width: 100%;
+    justify-content: flex-start !important;
+}
+
+.HandCards .card {
+    position: relative;
+    height: 300px;
+    max-width: 300px;
+    flex-direction: row;
+    background: transparent;
+    border: none;
+}
+
+.HandCards .react-multi-carousel-item {
+    width: fit-content;
+}
+
+.HandCards .card h1 {
+    font-size: 14rem;
+    background: linear-gradient(to top, #C2C1C194, #FFFFFF);
+    -webkit-background-clip: text;
+    letter-spacing: -1.5rem;
+    background-clip: text;
+    color: transparent !important;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 900 !important;
+    width: calc(100% - 70%);
+    margin-bottom: 0 !important;
+    align-items: center;
+}
+
+.HandCards .card img {
+    height: 100%;
+    width: 70%;
+    border-radius: 10px !important;
+    object-fit: cover;
+    z-index: 2;
+}
+
+
+@media screen and (max-width: 1280px) {
+    .HandCards {
+        padding: 1rem;
+    }
+
+    .HandCards .card h2 {
+        font-size: 10rem;
+        margin-right: -1rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .HandCards .card {
+        position: relative;
+        /* min-height: 350px !important;
+        max-width: 100%; */
+        padding: 0rem;
+        background: transparent;
+    }
+
+    .HandCards .card h1 {
+        position: absolute;
+        font-size: 10rem;
+        top: 80% !important;
+        left: 0% !important;
+        z-index: 3;
+        background: linear-gradient(to bottom, white, black);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent !important;
+        transform: translate(0%, -50%);
+        letter-spacing: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .HandCards .card h2 {
+        font-size: 5rem;
+        margin-right: -1rem;
+    }
+
+}
+
+@media screen and (max-width: 428px) {
+    .HandCards {
+        padding: 0rem;
+    }
+
+    .HandCards .card {
+        position: relative;
+        padding: 0.5rem;
+        width: 100%;
+        height: 300px !important;
+    }
+
+    .HandCards .card img {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .HandCards .card h1 {
+        font-size: 8rem;
+        width: calc(100% - 0%);
+        /* transform: translate(40%, -50%); */
+        position: absolute !important;
+    }
+}

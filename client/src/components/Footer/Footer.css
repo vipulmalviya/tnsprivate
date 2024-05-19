@@ -1,0 +1,224 @@
+.footer {
+    z-index: 0;
+    position: relative;
+    width: 100vw;
+    color: var(--text-color);
+    overflow: hidden;
+  font-family: 'Helvetica Neue', sans-serif;
+    background-color: var(--nav-bg-color);
+}
+
+.footerT {
+    padding: 2rem 0rem;
+    justify-content: space-betwee;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+.Flogo {
+    width: 100%;
+    height: 100%;
+}
+
+.social {
+    justify-content: flex-end !important;
+    gap: 1rem;
+}
+
+.social svg {
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--decorate-color);
+}
+
+.footerM {
+    background-color: var(--nav-bg-color);
+}
+
+
+.footerM-l {
+    padding: 3.5rem 0rem;
+    width: 60%;
+    border-right: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+.footerM-l>h2 {
+ font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 800;
+    letter-spacing: .1rem;
+    font-size: var(--h2-Heading);
+}
+
+.footerM-l span {
+    /* font-size: var(--h1-font-size); */
+    color: var(--decorate-color) !important;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.footerM-l p {
+    margin-top: 2rem;
+font-family: 'Helvetica Neue', sans-serif;
+    font-size: var(--p2-Paragraph);
+    font-weight: 400;
+}
+
+.footerbtns {
+    gap: 1rem;
+    width: 100%;
+    justify-content: flex-start !important;
+    padding: 1rem 0;
+}
+
+.footerbtns button {
+    width: fit-content !important;
+    background: transparent;
+    border: none;
+}
+
+
+.footerM-r {
+    padding: 3.5rem 0rem;
+    width: 40%;
+    justify-content: center;
+}
+
+.footerM-r>div {
+    width: 70%;
+    /* background: red; */
+}
+
+.footerM-r h3 {
+    font-weight: 800;
+    font-family: 'Helvetica Neue', sans-serif;
+    /* background: red; */
+}
+
+.footerM-r .links {
+    margin: 0rem;
+}
+
+.footerM-r .links p {
+font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    font-size: var(--p1-Paragraph) !important;
+}
+
+.footeM-r-box {
+    /* align-items: flex-start !important; */
+    gap: 4rem;
+    margin: 1rem 0;
+}
+
+.search input {
+    position: relative;
+    border: 1px solid #c2bebe5a;
+    color: white !important;
+    outline: none;
+    padding: 1.8rem;
+    min-width: 100% !important;
+    border-radius: 35px;
+    background: transparent;
+}
+
+.input-with-icon {
+    background: url('../images/arrow.svg') !important;
+    background-repeat: no-repeat !important;
+    background-position: 95% center !important;
+    background-size: 20px 20px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    height: 40px;
+    width: 300px;
+}
+
+.footerB {
+    background-color: var(--dark-background-color);
+    position: relative;
+    padding: 2rem;
+}
+
+.footerB svg {
+    position: absolute;
+    right: 6rem;
+    top: 50%;
+    transform: translate(0%, -50%);
+    font-size: 2.5rem;
+    background-color: transparent;
+    border: 0;
+    color: var(--light-gray-color);
+}
+
+.footerB svg rect[Attributes] {
+    stroke-width: 10px !important;
+}
+
+.Rfooter a {
+    color: var(--text-color) !important;
+}
+
+
+@media screen and (max-width: 800px) {
+    .footerT {
+        width: 100%;
+        padding: 2rem 1rem;
+    }
+
+    .footerM {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .footerM-l {
+        padding: 1rem;
+        width: 100%;
+        border: none;
+    }
+
+    .footerM-r {
+        padding: 1rem;
+        width: 100%;
+        border: none;
+    }
+
+    .footerM-r>div {
+        width: 100% !important;
+    }
+
+    .footeM-r-box {
+        flex-direction: column !important;
+        width: 100% !important;
+        align-items: flex-start !important;
+    }
+
+    .footerB {
+        padding: 2rem 1rem;
+        justify-content: space-between !important;
+    }
+
+    .search input {
+        max-width: 300px;
+    }
+}
+
+
+@media screen and (max-width: 428px) {
+    .footerB svg {
+        position: absolute;
+        right: 5%;
+        top: 50%;
+    }
+
+    .Flogo img {
+        width: 40%;
+    }
+
+    .footerM-r {
+        padding: 1rem 0;
+    }
+
+    .footerM-l {
+        padding: 0;
+    }
+}

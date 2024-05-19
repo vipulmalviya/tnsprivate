@@ -1,0 +1,112 @@
+.singlecard {
+    min-height: 300px;
+    max-width: 280px;
+    padding: 1rem;
+    background: transparent;
+    color: var(--text-color);
+    border: none;
+}
+
+.singlecard>img {
+    border-radius: 15px !important;
+    object-fit: cover;
+    height: 360px;
+}
+
+.movieDetails {
+    min-height: 150px;
+    width: 100%;
+    justify-content: space-between !important;
+    padding: 1rem 0;
+    color: var(--text-color);
+}
+
+.movieDetails span:first-child {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 70%;
+}
+
+.movieDetails h4 {
+    font-family: 'Helvetica Neue', sans-serif;
+    letter-spacing: .1rem;
+    width: 100%;
+    text-overflow: ellipsis;
+    margin-bottom: 0;
+    font-weight: 800;
+    overflow: hidden;
+}
+
+.movieDetails p {
+    font-size: var(--p2-Paragraph);
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    color: #D9D9D9;
+}
+
+.movieDetails span {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.movieDetails span img {
+    width: fit-content !important;
+}
+
+.movieDetails .number {
+    color: var(--light-gray-color);
+    font-size: var(--p2-Paragraph);
+ font-family: 'Helvetica Neue', sans-serif;
+
+    font-weight: 800;
+    height: auto;
+}
+
+.movieDetails .mainbtn {
+    width: 100% !important;
+    display: flex;
+    align-self: flex-end;
+}
+
+
+@media screen and (max-width: 428px) {
+    .movieDetails {
+        min-height: 140px;
+    }
+
+    .singlecard {
+        width: 100% !important;
+        padding: 0 .5rem !important;
+    }
+
+    .singlecard > img {
+        height: 300px !important;
+    }
+
+    .singlecard .movieDetails span h4 {
+        font-size: var(--p2-Paragraph);
+    }
+    .singlecard .movieDetails span img {
+        width: 60% !important;
+        height: 23px;
+        margin-top: 0 !important;
+    }
+
+    .singlecard .movieDetails .mainbtn {
+        font-size: var(--p3-Paragraph);
+    }
+    .logospan{
+        gap: 0rem !important;
+    }
+
+    .singlecard .movieDetails .number {
+        font-size: var(--p3-Paragraph);
+        font-weight: 600;
+    }
+
+    .singlecard .movieDetails p {
+        font-size: var(--p3-Paragraph);
+        color: #D9D9D9;
+    }
+
+}

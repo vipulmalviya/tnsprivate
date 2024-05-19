@@ -1,0 +1,97 @@
+.mainbtn {
+    background-color: #BACC4A;
+    color: var(--black-color);
+    padding: 0px 37px;
+    width: fit-content !important;
+    border-radius: 70px;
+    height: 46px;
+    cursor: pointer;
+    border: none;
+    text-transform: capitalize;
+    white-space: nowrap;
+}
+
+.mainbtn p {
+    font-size:16px ;
+    /* font-size: var(--p1-Paragraph); */
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.mainbtn a svg {
+    font-size: 1rem;
+}
+
+
+/* mainbtnSec css */
+
+.mainbtnSec {
+    background-color: transparent;
+    padding: 0px 37px;
+    width: fit-content !important;
+    border-radius: 70px;
+    height: 46px;
+    cursor: pointer;
+    border: 1px solid var(--decorate-color);
+    color: var(--decorate-color);
+    gap: 0.5rem;
+    text-transform: capitalize;
+    white-space: nowrap;
+}
+
+.mainbtnSec a svg {
+    font-size: 1rem;
+    color: var(--decorate-color);
+}
+
+.mainbtnSec p {
+    font-size: 16px;
+    color: var(--decorate-color);
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+
+/* BlackBtn css */
+
+.BlackBtn {
+    background-color: transparent;
+    padding: 10px 37px;
+    width: fit-content !important;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    gap: 0.5rem;
+    text-transform: capitalize;
+    white-space: nowrap;
+    background: var(--black-color);
+}
+
+.BlackBtn a svg {
+    font-size: 1.2rem;
+}
+
+.BlackBtn p {
+    font-size: var(--p2-Paragraph);
+    color: var(--text-color);
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 500
+}
+
+
+
+@media screen and (max-width: 786px) {
+
+    .mainbtn {
+        padding: 10px 10px;
+    }
+
+    .mainbtnSec {
+        padding: 10px 10px;
+    }
+
+}
+
+/* mobile devices */
