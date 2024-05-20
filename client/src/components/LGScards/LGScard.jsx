@@ -9,20 +9,20 @@ const LGScard = ({ data, sectiontitle, truep }) => {
 
     const responsive = {
         superlargedesktop: {
-            breakpoint: { max: 4000, min: 3000 },
-            items: 12,
+                  breakpoint: { max: 4000, min: 1860 },
+            items: 11,
         },
         desktop: {
-            breakpoint: { max: 3000, min: 1024 },
-            items: 11,
+                  breakpoint: { max: 1860, min: 1280 },
+            items: 8.7,
         },
         tablet: {
             breakpoint: { max: 1024, min: 464 },
-            items: 10,
+            items: 6,
         },
         mobile: {
             breakpoint: { max: 464, min: 0 },
-            items: 6,
+            items: 3,
         }
     }
 
@@ -37,7 +37,7 @@ const LGScard = ({ data, sectiontitle, truep }) => {
                 >
                     {data.map((elem) => {
                         return <div className='LSGcard d-flex flex-column align-items-center justify-content-center'>
-                            {truep ? <h2>{elem.svg}</h2> : <img src={elem.svg} alt="" />}
+                            {truep ? <img src={elem.svg} alt="" /> : <img src={elem.svg} alt="" />}
                             <h3>{elem.title}</h3>
                         </div>
                     })}

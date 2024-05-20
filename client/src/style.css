@@ -48,7 +48,7 @@ body::-webkit-scrollbar {
   --nav-bg-color: #282829;
 
   /* spacing Between sections */
-  --s-tb: 5.375rem;
+  --s-tb: 50px;
 
   /* spacing Between sections and heading */
   --h-tb: 6.25rem;
@@ -138,7 +138,10 @@ section {
 .pcontainer {
   min-height: 254px;
   width: 100%;
-  background: var(--black-color);
+  background:url("images/pcontainer.png");
+  background-color: var(--black-color);
+  background-repeat: no-repeat !important;
+  background-position: right !important;
   padding: 0rem 3rem;
   border-radius: 15px;
 }
@@ -149,6 +152,7 @@ section {
   font-weight: 800;
   line-height: 2.5rem;
   color: var(--text-color);
+  width: 70%;
 }
 
 .pcontainer .mainbtn a  {
@@ -162,7 +166,8 @@ section {
   font-family: 'Helvetica Neue', sans-serif;
   font-weight: 800;
   color: var(--text-color);
-  font-size: var(--h3-Heading);
+  /* font-size: var(--h3-Heading); */
+  font-size: 24px;
   cursor: pointer;
   display: flex;
   align-items: end;
@@ -1784,6 +1789,15 @@ input:checked:hover~.rating-counter:before {
     max-width: 100% !important;
     margin: 1.5rem 0;
     padding: 0 .5rem !important;
+  }
+
+  .pcontainer {
+    align-items: center;
+    justify-content: center;
+    background: var(--black-color);
+  }
+  .pcontainer h2{
+    width: 100%;
   }
 }
 

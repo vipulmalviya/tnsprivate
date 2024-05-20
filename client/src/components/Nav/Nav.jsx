@@ -174,7 +174,7 @@ const Nav = ({ setQuery, query }) => {
                 <div className="container">
                     <nav className='d-flex align-items-center gap-3'>
                         <div className="left d-flex">
-                            <Link to="/" className="logo"><img height={"100%"} weight={"100%"} src="public/images/latestlogo.svg" alt="" /></Link>
+                            <Link to="/" className="logo"><img height={"100%"} weight={"100%"} src="images/latestlogo.svg" alt="" /></Link>
                         </div>
                         <div className="navM gap-4 align-items-center justify-content-end">
                             <form action="" className='d-flex align-items-center '>
@@ -187,7 +187,7 @@ const Nav = ({ setQuery, query }) => {
                                 <CiSearch />
                             </form>
                             <div className='watchlistDiv d-flex gap-2 align-items-center'>
-                                <img height={"100%"} width={"100%"} src="public/images/watchlistplus.svg" alt="watchlist plus icone" />
+                                <img height={"100%"} width={"100%"} src="images/watchlistplus.svg" alt="watchlist plus icone" />
                                 <p>My Watchlist</p>
                             </div>
                             <img data-toggle="tooltip" title="My Profile" height={"35px"} width={"35px"} src="images/Ellipse 33.svg" alt="" />

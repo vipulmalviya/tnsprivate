@@ -14,149 +14,149 @@ const Home = () => {
 
   const dataL = [
     {
-      svg: "EN",
+      svg: "images/english.svg",
       title: "English",
     },
     {
-      svg: "हिन्दी",
+      svg: "images/Hindi 1.svg",
       title: "Hindi",
     },
     {
-      svg: "മലയാളം",
+      svg: "images/malyalam.svg",
       title: "Malayalam",
     },
     {
-      svg: "தமிழ்",
+      svg: "images/tamil.svg",
       title: "Tamil",
     },
     {
-      svg: "తెలుగు",
+      svg: "images/telugu.svg",
       title: "Telugu",
     },
     {
-      svg: "ગુજરાતી",
+      svg: "images/gujrati.svg",
       title: "Gujarati",
     },
     {
-      svg: "मराठी",
+      svg: "images/marathi.svg",
       title: "Marathi",
     },
     {
-      svg: "ㅊ",
+      svg: "images/korean.svg",
       title: "Korean",
     },
     {
-      svg: "日本語",
+      svg: "images/japanese.svg",
       title: "Japanese",
     },
     {
-      svg: "گ",
+      svg: "images/iran.svg",
       title: "Iran",
     },
     {
-      svg: "FR",
+      svg: "images/franch.svg",
       title: "French",
     },
   ]
   const dataG = [
     {
-      svg: "EN",
+      svg: "images/action.svg",
       title: "Action",
     },
     {
-      svg: "हिन्दी",
+      svg: "images/adventure.svg",
       title: "Adventure",
     },
     {
-      svg: "മലയാളം",
+      svg: "images/anime.svg",
       title: "Anime",
     },
     {
-      svg: "தமிழ்",
+      svg: "images/awards.svg",
       title: "Awards",
     },
     {
-      svg: "తెలుగు",
+      svg: "images/comedy.svg",
       title: "Comedy",
     },
     {
-      svg: "ગુજરાતી",
+      svg: "images/cinematic.svg",
       title: "Cinematic",
     },
     {
-      svg: "मराठी",
+      svg: "images/crime.svg",
       title: "Crime",
     },
     {
-      svg: "ㅊ",
+      svg: "images/documentary.svg",
       title: "Documentary",
     },
     {
-      svg: "日本語",
+      svg: "images/dystopian.svg",
       title: "Dystopian",
     },
     {
-      svg: "گ",
+      svg:"images/family.svg",
       title: "Family",
     },
     {
-      svg: "FR",
+      svg: "images/fantasy.svg",
       title: "Fantastic",
     },
     {
-      svg: "FR",
+      svg: "images/gangstar.svg",
       title: "Gangsters",
     },
     {
-      svg: "FR",
+      svg: "images/historical.svg",
       title: "Historical",
     },
     {
-      svg: "FR",
+      svg: "images/horror.svg",
       title: "Horror",
     },
     {
-      svg: "FR",
+      svg: "images/musical.svg",
       title: "Musical",
     },
     {
-      svg: "FR",
+      svg: "images/mystery.svg",
       title: "Mystery",
     },
     {
-      svg: "FR",
+      svg: "images/psychological.svg",
       title: "Psychological",
     },
     {
-      svg: "FR",
+      svg: "images/romance.svg",
       title: "Romance",
     },
     {
-      svg: "FR",
+      svg: "images/sci-fi.svg",
       title: "Sci-Fi",
     },
     {
-      svg: "FR",
+      svg: "images/short-films.svg",
       title: "Short films",
     },
     {
-      svg: "FR",
+      svg: "images/sport.svg",
       title: "Sport",
     },
     {
-      svg: "FR",
+      svg: "images/thriller.svg",
       title: "Thriller",
     },
     {
-      svg: "FR",
+      svg: "images/superhero.svg",
       title: "Superhero",
     },
     {
-      svg: "FR",
+      svg: "images/western.svg",
       title: "Western",
     },
     {
-      svg: "FR",
+      svg: "images/war.svg",
       title: "War",
     },
   ]
@@ -204,27 +204,26 @@ const Home = () => {
 
   const responsive = {
     superlargedesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 8.5,
+      breakpoint: { max: 4000, min: 1860 },
+      items: 8.7,
     },
     desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 8.5,
+      breakpoint: { max: 1860, min: 1280 },
+      items: 7,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 5,
+      items: 4,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 5,
+      items: 3,
     }
   }
 
 
   return (
     <Fragment>
-
       <HomeSlider />
       <section className='carftSection'>
         <div className="container">
@@ -238,7 +237,6 @@ const Home = () => {
               <h2>Add Titles to Your Watchlist Which Better Suits Your Mood & Taste</h2>
               <Button linkprop={"/watchlistPage"}> <img height={"15px"} width={"15px"} src="images/cardsplus.svg" alt="icone" /> Add to Watchlist</Button>
             </div>
-            <img src="images/pcontainer.png" alt="" />
           </div>
 
         </div>
@@ -266,8 +264,10 @@ const Home = () => {
       </section>
 
       {/* <HandSlider /> */}
-      <MovieSlider type={"movie"} title={"Top Movies Suggestions "} />
-      <MovieSlider type={"tv"} title={"Top Tv Series Suggestions"} />
+      <MovieSlider type={"movie"} title={"Handpicked Movies For You "} />
+      <MovieSlider type={"tv"} title={"Handpicked TV Series For You"} />
+      <MovieSlider type={"movie"} title={"Best Crime Drama Movies For You"} />
+      <MovieSlider type={"tv"} title={"True Crime Tv Series For You"} />
       <CuratedSlider title={"Curated Lists Just For You "} />
     </Fragment >
   )

@@ -220,19 +220,18 @@ const MovieSlider = ({ title, type }) => {
 
     const responsive = {
         superlargedesktop: {
-            breakpoint: { max: 4000, min: 3000 },
+            breakpoint: { max: 4000, min: 1860 },
             items: 7,
         },
         desktop: {
-            breakpoint: { max: 3000, min: 1024 },
-            items: 7,
+            breakpoint: { max: 1860, min: 1280 },
+            items: 5.7,
         },
         tablet: {
             breakpoint: { max: 1024, min: 464 },
             items: 2.5,
         },
         mobile: {
-            // margin:"200px",
             breakpoint: { max: 464, min: 0 },
             items: 1.5,
         }

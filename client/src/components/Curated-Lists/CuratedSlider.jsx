@@ -64,7 +64,7 @@ const CuratedSlider = ({ title }) => {
                 >
                     {Lcard.map((elem, index) => <Link to="/curatedPage" key={index}>
                         <div className="card m-2 d-flex"  style={{
-                            background: `linear-gradient(to bottom, transparent, black), url(${elem.poster}) no-repeat`,
+                            background: `url(${elem.poster}) no-repeat`,
                         }}>
                             <div className='CardContainer'>
                                 <div className="tag">

@@ -38,7 +38,7 @@ const Card = ({ index, Poster, Title, catagory, watch, btn, onclick, value }) =>
                             <p>{catagory}</p>
                         </span>
                         <span className='logospan position-relative gap-2 h-75  d-flex flex-column justify-content-start align-items-center'>
-                            <img className='mt-1' height={"20px"} src="images/TNS 1.svg" alt="" />
+                            <img className='mt-1' height={"20px"} src="images/latestlogo.svg" alt="" />
                             <span className="number">{watch}</span>
                         </span>
                     </div>

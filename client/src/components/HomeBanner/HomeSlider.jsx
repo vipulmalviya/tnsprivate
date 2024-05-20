@@ -152,7 +152,7 @@ const HomeSlider = () => {
                                             <p className='mb-0'>{elem.Runtime}</p>
                                         </div>
                                         <span className='h-100 w-100 d-flex align-items-center justify-content-start gap-2 position-relative'>
-                                            <img height={"20px"} width={"22px"} src="images/Logo.svg" alt="" />
+                                            <img height={"20px"} width={"22px"} src="images/latestlogo.svg" alt="" />
                                             <h2 className='d-flex align-items-start justify-content-center m-0'>{elem.popularity}</h2>
                                         </span>
                                     </div>

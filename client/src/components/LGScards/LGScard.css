@@ -6,20 +6,27 @@
     background-color: var(--black-color);
     cursor: pointer;
 }
+
 .serviceCards {
-    height:95px ;
+    height: 95px;
     width: 183px;
     border-radius: 10px;
     padding: 20px;
     gap: 2px;
     cursor: pointer;
 }
-.LSGcard:hover , .serviceCards:hover{
+.serviceCards img {
+    height: 35px !important;
+    width: 126px !important;
+}
+
+.LSGcard:hover,
+.serviceCards:hover {
     border: 1px solid white;
 }
 
-.serviceCards img{
-    height:100% ;
+.serviceCards img {
+    height: 100%;
     width: 100%;
 }
 
@@ -61,4 +68,36 @@
 .cardContainer::after {
     background: linear-gradient(to right, rgba(18, 18, 18, 0) 0%, #111111 49.5%);
     right: 0%;
+}
+
+
+
+
+@media screen and (max-width:428px) {
+    .LSGcard {
+        min-height: 100px;
+        max-width: 120px;
+        border-radius: 10px;
+        padding: 20px;
+        background-color: var(--black-color);
+        cursor: pointer;
+    }
+
+    .serviceCards {
+        min-height: 100px;
+        max-width: 120px;
+        border-radius: 10px;
+        padding: 20px;
+        gap: 2px;
+        cursor: pointer;
+    }
+
+    .cardContainer::before {
+        display: none;
+    } 
+    
+    .cardContainer::after {
+        display: none;
+    }
+
 }

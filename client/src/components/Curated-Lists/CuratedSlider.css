@@ -16,18 +16,26 @@
     min-height: 600px;
     min-width: 300px;
     border-radius: 25px;
-    padding: 1rem;
     background-position: top !important;
     background-size: cover !important;
     cursor: pointer;
-    /* margin: 0 2rem ; */
+    overflow: hidden;
+}
+.CuratedCards .card::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width:100%;
+    background: linear-gradient(to bottom, transparent, var(--black-color));
+    bottom: 0rem;
 }
 
 .CuratedCards .card .tag {
-    width: fit-content;
-    padding: .1rem .5rem;
-    border-radius: 5px;
-    font-size: var(--p2-Paragraph);
+    min-width: 80px;
+    min-height: 21px;
+    padding: 2px 8px 2px 8px !important;
+    border-radius: 45px;
+    font-size: var(--p3-Paragraph);
     background-color: var(--decorate-color);
     color: black;
     margin-bottom: 1rem;
@@ -38,17 +46,16 @@
 .CuratedCards .card h3 {
     color: var(--text-color);
     /* line-height: 2.5rem; */
-    font-size: var(--h3-Heading);
-    font-family: "HalyardBold", sans-serif;
+    font-size: 24px;
+    font-family: 'Helvetica Neue', sans-serif;
     font-weight: 800;
-    letter-spacing: .1rem;
 }
 
 .CuratedCards .card p {
     color: var(--light-gray-color);
-    font-size: var(--p2-Paragraph);
-    font-family: "inter", sans-serif;
-    font-weight: 400;
+    font-size: var(--p3-Paragraph);
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 400 !important;
 }
 
 .CardContainer {

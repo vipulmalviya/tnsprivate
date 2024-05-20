@@ -2,13 +2,16 @@
     background-color: #BACC4A;
     color: var(--black-color);
     padding: 13px 20px 13px 20px ;
-    min-width: 187px !important;
+    min-width: 150px !important;
     border-radius: 70px;
     height: 46px;
     cursor: pointer;
     border: none;
     text-transform: capitalize;
     white-space: nowrap;
+}
+.mainbtn:hover{
+    background: #E7F973 !important;
 }
 
 .mainbtn p {
@@ -29,7 +32,7 @@
 .mainbtnSec {
     background-color: transparent;
     padding: 13px 20px 13px 20px ;
-    min-width: 187px !important;
+    min-width: 150px !important;
     border-radius: 70px;
     height: 46px;
     cursor: pointer;
