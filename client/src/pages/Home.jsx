@@ -213,11 +213,11 @@ const Home = () => {
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 4,
+      items: 5.2,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 3,
+      items: 2.7,
     }
   }
 
@@ -232,7 +232,7 @@ const Home = () => {
             Craft Your Watchlist
             <IoIosArrowForward />
           </h3>
-          <div className='pcontainer d-flex '>
+          <div className='pcontainer d-flex ' style={{backgroundImage: `url("images/pcontainer.svg")`}}>
             <div className=' d-flex flex-column gap-3 align-items-start justify-content-center' >
               <h2>Add Titles to Your Watchlist Which Better Suits Your Mood & Taste</h2>
               <Button linkprop={"/watchlistPage"}> <img height={"15px"} width={"15px"} src="images/cardsplus.svg" alt="icone" /> Add to Watchlist</Button>

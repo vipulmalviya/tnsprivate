@@ -169,7 +169,7 @@ const Nav = ({ setQuery, query }) => {
 
 
     return (
-        <>
+        <div className='position-sticky top-0 z-3'>
             <header className='d-flex align-items-center justify-content-center'>
                 <div className="container">
                     <nav className='d-flex align-items-center gap-3'>
@@ -242,7 +242,7 @@ const Nav = ({ setQuery, query }) => {
                 </Carousel>
 
             </div >
-        </>
+        </div>
     )
 }
 

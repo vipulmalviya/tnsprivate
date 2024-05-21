@@ -30,6 +30,7 @@ const CuratedSlider = ({ title }) => {
             watch: "91.5",
             paragraph: "6 Movies Ranked According to TNS Score",
         },
+    
     ];
 
     const responsive = {
@@ -58,7 +59,7 @@ const CuratedSlider = ({ title }) => {
                     <h3 className='SectionLable'>{title}<IoIosArrowForward /></h3>
                     <span className="d-flex align-items-center justify-content-center gap-2" style={{ color: "white", cursor: "pointer" }}>See All <span><img height="100%" width="100%" src="images/tir.svg" alt="" /></span></span>
                 </div>
-                <Carousel className="CuratedCards d-flex"
+                <Carousel className="CuratedCards align-items-center justify-content-center d-flex"
                     responsive={responsive}
                     removeArrowOnDeviceType={["tablet", "mobile"]}
                 >

@@ -3,7 +3,6 @@
     width: 100%;
     gap: 3rem;
     justify-content: flex-start !important;
-    ;
 }
 
 .CuratedCards span {
@@ -13,13 +12,14 @@
 .CuratedCards .card {
     justify-content: flex-end;
     position: relative;
-    min-height: 600px;
-    min-width: 300px;
-    border-radius: 25px;
+    height: 500px;
+    max-width: 480px;
+    border-radius: 20px;
     background-position: top !important;
     background-size: cover !important;
     cursor: pointer;
     overflow: hidden;
+    border: none;
 }
 .CuratedCards .card::before {
     position: absolute;
@@ -63,8 +63,7 @@
     transform: translateY(2rem);
     transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) .3s;
     background: transparent;
-    padding: 1rem;
-
+    padding: 1rem 3rem;
 }
 
 

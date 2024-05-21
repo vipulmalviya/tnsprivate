@@ -136,9 +136,9 @@ section {
 /* Craft Your Watchlist */
 
 .pcontainer {
+  border: 1px solid rgba(255, 255, 255, 20%);
   min-height: 254px;
   width: 100%;
-  background:url("images/pcontainer.png");
   background-color: var(--black-color);
   background-repeat: no-repeat !important;
   background-position: right !important;
@@ -147,10 +147,10 @@ section {
 }
 
 .pcontainer h2 {
-  font-size: var(--h3-Heading);
+  font-size: 28px;
   font-family: 'Helvetica Neue', sans-serif;
   font-weight: 800;
-  line-height: 2.5rem;
+  line-height: 34px;
   color: var(--text-color);
   width: 70%;
 }
