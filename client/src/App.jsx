@@ -11,36 +11,33 @@ import { CuratedPage } from './pages/CuratedPage.jsx';
 import CategoryPage from './pages/CategoryPage.jsx';
 import SerachResult from './pages/SearchResult.jsx';
 import { useState } from 'react';
-
-
+import TastePage from './pages/TastePage.jsx';
+import MoodPage from './pages/MoodPage.jsx';
+import ExpreriencePage from './pages/ExpreriencePage.jsx';
 function App() {
-
-  const [query, setQuery] = useState('thor');
-
-
-
-
 
   const location = useLocation();
 
-  const showMainNavBar = location.pathname !== '/login' && location.pathname !== '/register';
-  const showFooter = location.pathname !== '/login' && location.pathname !== '/register';
+  const excludedPaths = ['/login', '/register', '/','/moodPage','/expreriencePage'];
 
+  const showMainNavBar = !excludedPaths.includes(location.pathname);
+  const showFooter = !excludedPaths.includes(location.pathname);
 
-
-  
   return (
     <>
-      {showMainNavBar ? <Nav  setQuery={setQuery} /> : null}
+      {showMainNavBar ? <Nav /> : null}
       <Routes location={location}>
         <Route exact path="/login" element={<Login />} />
-        <Route exact path="/Register" element={<Register />} />
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="/WatchlistPage" element={<WatchlistPage />} />
-        <Route path="/SingleMoviePage" element={<SingleMoviePage />} />
-        <Route path="/search" element={<SerachResult query={query} />} />
-        <Route path="/CuratedPage" element={<CuratedPage />} />
-        <Route path="/CategoryPage" element={<CategoryPage />} />
+        <Route exact path="/" element={<TastePage/>} />
+        <Route exact path="/moodPage" element={<MoodPage/>} />
+        <Route exact path="/expreriencePage" element={<ExpreriencePage/>} />
+        <Route exact path="/register" element={<Register />} />
+        <Route exact path="/home" element={<Home />} />
+        <Route exact path="/watchlistPage" element={<WatchlistPage />} />
+        <Route path="/singleMoviePage" element={<SingleMoviePage />} />
+        <Route path="/search" element={<SerachResult />} />
+        <Route path="/curatedPage" element={<CuratedPage />} />
+        <Route path="/categoryPage" element={<CategoryPage />} />
       </Routes>
       {showFooter ? <Footer /> : null}
     </>

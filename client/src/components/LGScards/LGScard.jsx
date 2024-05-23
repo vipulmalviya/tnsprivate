@@ -36,7 +36,7 @@ const LGScard = ({ data, sectiontitle, truep }) => {
                     className='cardContainer d-flex align-items-center '
                 >
                     {data.map((elem) => {
-                        return <div className='LSGcard d-flex flex-column align-items-center justify-content-center'>
+                        return <div key={elem} className='LSGcard d-flex flex-column align-items-center justify-content-center'>
                             {truep ? <img src={elem.svg} alt="" /> : <img src={elem.svg} alt="" />}
                             <h3>{elem.title}</h3>
                         </div>

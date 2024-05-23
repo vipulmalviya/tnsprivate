@@ -255,7 +255,7 @@ const Home = () => {
             className='cardContainer d-flex align-items-center '
           >
             {dataS.map((elem) => {
-              return <div className='serviceCards d-flex align-items-center justify-content-center' style={{ backgroundColor: elem.color }}>
+              return <div key={elem} className='serviceCards d-flex align-items-center justify-content-center' style={{ backgroundColor: elem.color }}>
                 <img height={"100%"} width={"100%"} src={elem.image} alt="" />
               </div>
             })}

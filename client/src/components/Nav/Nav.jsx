@@ -7,36 +7,27 @@ import { CiSearch } from 'react-icons/ci'
 import { AiOutlineAppstoreAdd } from 'react-icons/ai'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import Tagebutton from '../buttons/Tagebutton'
 
 const Nav = ({ setQuery, query }) => {
 
-
-    function active(elem) {
-        elem.classList.toggle("at")
-    }
-
-
     const [Nav, setNav] = useState(false)
-
     function NavFunc(params) {
         setNav(!Nav)
     }
-
     const navigate = useNavigate()
-
     const handleNavigate = (event) => {
         navigate('/search')
     };
 
-
     const responsive = {
         superlargedesktop: {
-            breakpoint: { max: 4000, min: 3000 },
-            items: 12,
+            breakpoint: { max: 4000, min: 1860 },
+            items: 10,
         },
         desktop: {
-            breakpoint: { max: 3000, min: 1024 },
-            items: 12,
+            breakpoint: { max: 1860, min: 1280 },
+            items: 10,
         },
         tablet: {
             breakpoint: { max: 1024, min: 464 },
@@ -48,124 +39,21 @@ const Nav = ({ setQuery, query }) => {
         }
     }
 
+    const Genres = ["Happy", "Sad", "Adventurous", "Romantic", "Scary", "Thought-Provoking", "Thrilling", "Slowburn", "Dark", "Mind-Bending", "Family-Friendly", "Epic", "Uplifting", "Mystical", "Humorous", "Nostalgic"]
 
-    const array = [
-        {
-            category: "Top_Rated",
-            value: "Top Rated",
-            Poster: "images/wonka.png",
-            title: "Wonka",
-        },
-        {
-            category: "Top_Rated",
-            value: "Top Rated",
-            Poster: "images/wonka.png",
-            title: "Wonka",
-        },
-        {
-            category: "Top_Rated",
-            value: "Top Rated",
-            Poster: "images/wonka.png",
-            title: "Wonka",
-        },
-        {
-            category: "Top_Rated",
-            value: "Top Rated",
-            Poster: "images/wonka.png",
-            title: "Wonka",
-        },
-        {
-            category: "Top_Rated",
-            value: "Top Rated",
-            Poster: "images/wonka.png",
-            title: "Wonka",
-        },
-        {
-            category: "AcademyWinner",
-            value: "Academy Winner",
-            Poster: "images/wonka.png",
-            title: "Wonka",
+    const [selectedGenres, setSelectedGenres] = useState([]);
 
-        },
-        {
-            category: "Around_the_Globe",
-            value: "Around the Globe",
-            Poster: "images/wonka.png",
-            title: "Wonka",
-
-        },
-        {
-            category: "User’s_Choice",
-            value: "User’s Choice",
-            Poster: "images/wonka.png",
-            title: "Wonka",
-
-        },
-        {
-            category: "Handpicked",
-            value: "Handpicked",
-            Poster: "images/wonka.png",
-            title: "Wonka",
-
-        },
-        {
-            category: "Classics",
-            value: "Classics",
-            Poster: "images/wonka.png",
-            title: "Wonka",
-
-        },
-        {
-            category: "Classics",
-            value: "Classics",
-            Poster: "images/wonka.png",
-            title: "Wonka",
-
-        },
-        {
-            category: "Classics",
-            value: "Classics",
-            Poster: "images/wonka.png",
-            title: "Wonka",
-
-        },
-        {
-            category: "Family_Friendly",
-            value: "Family Friendly",
-            Poster: "images/wonka.png",
-            title: "Wonka",
-
-        },
-        {
-            category: "Family_Friendly",
-            value: "Family Friendly",
-            Poster: "images/wonka.png",
-            title: "Wonka",
-
-        },
-        {
-            category: "Family_Friendly",
-            value: "Family Friendly",
-            Poster: "images/wonka.png",
-            title: "Wonka",
-
-        },
-        {
-            category: "Family_Friendly",
-            value: "Family Friendly",
-            Poster: "images/wonka.png",
-            title: "Wonka",
-
-        },
-        {
-            category: "Family_Friendly",
-            value: "Family Friendly",
-            Poster: "images/wonka.png",
-            title: "Wonka",
-
-        }
-    ]
-
+    const handleGenreSelect = (genre) => {
+        setSelectedGenres((prevSelected) => {
+            if (prevSelected.includes(genre)) {
+                return prevSelected.filter(g => g !== genre);
+            } else if (prevSelected.length < 10) {
+                return [...prevSelected, genre];
+            } else {
+                return prevSelected;
+            }
+        });
+    };
 
 
     return (
@@ -235,10 +123,14 @@ const Nav = ({ setQuery, query }) => {
                     removeArrowOnDeviceType={["tablet", "mobile"]}
                     responsive={responsive}
                     className='container d-flex gap-2 align-items-center justify-content-start'>
-                    {array.map((elem, index) => {
-                        return <button onClick={(event) => active(event.currentTarget)} key={index} data-name={elem.category} className="Categorybtns d-flex align-items-center justify-content-center"> <span>{elem.value}</span>
-                        </button>
-                    })}
+                    {Genres.map((elem, index) => (
+                        <Tagebutton
+                            key={index}
+                            tag={elem}
+                            isSelected={selectedGenres.includes(elem)}
+                            onSelect={handleGenreSelect}
+                        />
+                    ))}
                 </Carousel>
 
             </div >

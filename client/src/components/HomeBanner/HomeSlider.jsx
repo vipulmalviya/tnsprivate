@@ -115,7 +115,7 @@ const HomeSlider = () => {
         <>
             <section className="Homecontainer d-flex align-items-center justify-content-center">
                 <Swiper
-                    speed={1200}
+                    speed={1300}
                     autoplay={{ delay: 5000, disableOnInteraction: true , pauseOnMouseEnter: true ,waitForTransition: true}}
                     effect={'coverflow'}
                     grabCursor={true}
@@ -127,7 +127,7 @@ const HomeSlider = () => {
                         stretch: 0,
                         depth: 100,
                         modifier: 3,
-                    }}
+                    }}Continue
                     pagination={{ el: '.swiper-pagination', clickable: true }}
                     navigation={{
                         nextEl: '.swiper-button-next',
@@ -138,7 +138,7 @@ const HomeSlider = () => {
                     className="swiper_container"
                 >
                     {Lcard.map((elem) => {
-                        return <SwiperSlide className='swiper-slide d-flex' style={{
+                        return <SwiperSlide key={elem} className='swiper-slide d-flex' style={{
                             background: `linear-gradient(to top, black, transparent), url(${elem.poster_path})`
                         }}>
                             <div className='container p-5 d-flex align-items-end'>

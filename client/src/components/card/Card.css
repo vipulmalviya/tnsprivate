@@ -1,20 +1,20 @@
 .singlecard {
     position: relative;
-    max-height: 450px ;
+    max-height: 450px;
     width: 245px !important;
     padding: .5rem;
-    background: transparent ;
+    background: transparent;
     color: var(--text-color);
     border: none;
 }
 
-.singlecard > .cardbg {
+.singlecard>.cardbg {
     position: relative;
     border-radius: 10px !important;
     height: 348px !important;
     width: 100% !important;
     background-position: center !important;
-    background-repeat: no-repeat !important ;
+    background-repeat: no-repeat !important;
     background-size: cover !important;
     overflow: hidden;
 }
@@ -63,30 +63,31 @@
 .movieDetails .number {
     color: var(--light-gray-color);
     font-size: var(--p2-Paragraph);
-font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'Helvetica Neue', sans-serif;
     font-weight: 800;
     height: auto;
 }
-.cardsBtn{
+
+.cardsBtn {
     position: absolute;
     bottom: -30%;
     left: 50%;
-    transform: translate(-50% , -50%);
+    transform: translate(-50%, -50%);
     transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) .3s;
 
 }
 
-.singlecard:hover .cardbg::before{
+.singlecard:hover .cardbg::before {
     content: "";
     position: absolute;
-    height:100%;
-    width:100%;
-    background-color:#00000066;
+    height: 100%;
+    width: 100%;
+    background-color: #00000066;
     transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) .3s;
 }
 
-.singlecard:hover .cardsBtn{
-   bottom:0%;
+.singlecard:hover .cardsBtn {
+    bottom: 0%;
 }
 
 .movieDetails .mainbtn {
@@ -94,6 +95,49 @@ font-family: 'Helvetica Neue', sans-serif;
     display: flex;
     align-self: flex-end;
 }
+
+
+
+/* Experience Card  */
+
+
+.ExperienceCardDiv {
+    position: relative;
+    height: 150px;
+    width: 105px;
+    border-radius: 5px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.effect::after {
+    content: url("../../../public/images/tick.svg");
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.151) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .effect {
+    position: absolute;
+    height: 25%;
+    width: 25%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+    display: none;
+} */
+
+
 
 
 @media screen and (max-width: 428px) {
@@ -106,13 +150,14 @@ font-family: 'Helvetica Neue', sans-serif;
         padding: 0 .5rem !important;
     }
 
-    .singlecard > img {
+    .singlecard>img {
         height: 300px !important;
     }
 
     .singlecard .movieDetails span h4 {
         font-size: var(--p2-Paragraph);
     }
+
     .singlecard .movieDetails span img {
         width: 60% !important;
         height: 23px;
@@ -122,7 +167,8 @@ font-family: 'Helvetica Neue', sans-serif;
     .singlecard .movieDetails .mainbtn {
         font-size: var(--p3-Paragraph);
     }
-    .logospan{
+
+    .logospan {
         gap: 0rem !important;
     }
 

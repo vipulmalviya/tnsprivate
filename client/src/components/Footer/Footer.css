@@ -61,7 +61,7 @@
 
 .fright h3 {
     font-family: 'Helvetica Neue', sans-serif;
-    font-size: 24px;
+    font-size: var(--p1large-Paragraph);
     font-weight: 500;
 }
 

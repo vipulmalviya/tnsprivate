@@ -1,7 +1,7 @@
 .mainbtn {
     background-color: #BACC4A;
     color: var(--black-color);
-    padding: 13px 20px 13px 20px ;
+    padding: 13px 20px 13px 20px;
     min-width: 150px !important;
     border-radius: 70px;
     height: 46px;
@@ -10,8 +10,17 @@
     text-transform: capitalize;
     white-space: nowrap;
 }
-.mainbtn:hover{
-    background: #E7F973 !important;
+
+.disabled {
+    background: #e7f9735f !important;
+}
+
+.disabled:hover {
+    background: #e7f9735f !important;
+}
+
+.mainbtn:hover {
+    background: #E7F973;
 }
 
 .mainbtn p {
@@ -31,7 +40,7 @@
 
 .mainbtnSec {
     background-color: transparent;
-    padding: 13px 20px 13px 20px ;
+    padding: 13px 20px 13px 20px;
     min-width: 150px !important;
     border-radius: 70px;
     height: 46px;
@@ -81,6 +90,41 @@
     color: var(--text-color);
     font-family: 'Helvetica Neue', sans-serif;
     font-weight: 500
+}
+
+
+/* tagbutton */
+
+
+.Categorybtns {
+    white-space: nowrap;
+    font-size: var(--p1-Paragraph);
+    font-family: 'Helvetica Neue', sans-serif;
+    color: white;
+    padding: 0rem 37px;
+    width: fit-content;
+    border: 1px solid var(--light-gray-color);
+    cursor: pointer;
+    border-radius: 70px;
+    background: #FFFFFF1A;
+    height: 36px;
+    padding: 0rem 20px;
+    border: none;
+}
+
+
+.Categorybtns p {
+    font-size: var(--p4-Paragraph);
+    font-weight: 500;
+    margin-bottom: 0rem;
+}
+
+.Categorybtns:hover {
+    background: #FFFFFF4D !important;
+}
+
+.Active:hover {
+    background: #E7F973 !important;
 }
 
 

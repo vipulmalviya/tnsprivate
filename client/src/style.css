@@ -28,6 +28,9 @@ body::-webkit-scrollbar {
   --h3-Heading: 2rem;
 
   /* Text Sizes */
+
+  --p1large-Paragraph: 1.5rem;
+  /* 24px*/
   --p1-Paragraph: 1.25rem;
   /* 20px*/
   --p2-Paragraph: 1rem;
@@ -39,6 +42,7 @@ body::-webkit-scrollbar {
 
   /* color shades */
   --text-color: #FFFFFF;
+  --light-text-color: #D9D9D9;
   --black-color: black;
   --background-color: #171910;
   --dark-background-color: #111111;
@@ -85,7 +89,6 @@ body::-webkit-scrollbar {
 
 h1 {
   font-size: var(--h1-Heading);
-  margin-bottom: var(--h-tb);
 }
 
 h2 {
@@ -119,6 +122,9 @@ a {
   color: var(--dark-background-color);
 }
 
+/* input:focus{
+  outline: none !important;
+} */
 
 section {
   border-bottom: 1px solid rgba(128, 128, 128, 0.288);
@@ -126,12 +132,22 @@ section {
   /* background: green; */
 }
 
+.fullSection {
+  min-height: calc(100vh - 80px);
+  width: 100vw;
+  background-color: var(--nav-bg-color);
+  padding-top: 50px !important;
+}
 
 .container {
   max-width: 1700px !important;
   background: transparent;
 }
 
+
+.containerSm {
+  max-width: 455px !important;
+}
 
 /* Craft Your Watchlist */
 
@@ -155,7 +171,7 @@ section {
   width: 70%;
 }
 
-.pcontainer .mainbtn a  {
+.pcontainer .mainbtn a {
   font-size: var(--p2-Paragraph);
   font-family: 'Helvetica Neue', sans-serif;
   font-weight: 500;
@@ -166,8 +182,6 @@ section {
   font-family: 'Helvetica Neue', sans-serif;
   font-weight: 800;
   color: var(--text-color);
-  /* font-size: var(--h3-Heading); */
-  font-size: 24px;
   cursor: pointer;
   display: flex;
   align-items: end;
@@ -177,9 +191,6 @@ section {
 
 /* login page css */
 
-.Logindiv {
-  color: var(--text-color);
-}
 
 .Lleft {
   width: 100%;
@@ -195,14 +206,11 @@ section {
 
 .Rform {
   flex-direction: column;
-  align-items: flex-start !important;
   width: 100%;
   padding: 2rem 0 0 0;
   color: var(--text-color);
   gap: 5px;
 }
-
-
 
 .hinglight {
   color: var(--decorate-color);
@@ -238,9 +246,10 @@ section {
   font-size: 1.2rem;
   cursor: pointer;
   position: absolute;
-  right: 0;
+  left: 0;
   top: 50%;
   transform: translate(-50%, -50%);
+  display: none;
 }
 
 
@@ -283,84 +292,110 @@ section {
 }
 
 /* form css */
-.Rform {
-  flex-direction: column;
-  align-items: flex-start !important;
+
+.containerSm h1 {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: var(--p1large-Paragraph);
+  color: var(--decorate-color);
+  font-weight: 700;
+  line-height: 29.3px;
+  text-align: left;
+}
+
+.registerForm {
   width: 100%;
-  color: var(--text-color);
-  gap: 5px;
 }
 
-.Rform input {
-  color: var(--text-color);
-  background: transparent;
-  border: .5px solid var(--light-gray-color);
+.registerForm label {
   width: 100%;
-  height: 45px;
-  border-radius: 10px;
-  padding: 10px;
-}
-
-.Rform input:focus {
-  outline-color: var(--text-color);
-  outline-width: .5px !important;
-  outline-style: groove;
-}
-
-.Rform label {
-  /* margin-top: 1rem; */
-  margin-bottom: 0rem;
-  font-size: var(--p1-Paragraph);
-  color: var(--light-gray-color);
   font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 400;
-}
-
-.Rleft .hinglight {
-  font-size: var(--h1-Heading);
-  margin-bottom: 1rem;
-  letter-spacing: .1rem;
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 800;
-}
-
-
-.subhadding {
-  font-size: var(--h3-Heading);
-  font-family: 'Helvetica Neue', sans-serif;
-  letter-spacing: .1rem;
-  font-weight: 800;
-  margin-bottom: 0;
-}
-
-.Rright>p {
   font-size: var(--p2-Paragraph);
-  color: var(--light-gray-color);
-  opacity: .8;
-  margin-bottom: 0;
+  font-weight: 500;
+  line-height: 19.54px;
+  text-align: left;
+}
+
+.registerForm input {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  height: 46px;
+  border-radius: 50px;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  color: var(--light-text-color);
+}
+
+.containerSm p span {
   font-family: 'Helvetica Neue', sans-serif;
+  font-size: var(--p3-Paragraph);
   font-weight: 400;
+  line-height: 16.7px;
+  color: var(--decorate-color);
+  cursor: pointer;
 }
 
-.Rleft p {
-  margin-bottom: 2rem;
-  font-size: var(--p1-Paragraph);
+.sperator {
+  position: relative;
+  width: 100%;
 }
 
-.Rleft li {
-  display: flex;
-  list-style: none;
-  align-items: center !important;
-  justify-content: center;
+.sperator::before,
+.sperator::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 45%;
+  background: rgba(255, 255, 255, 0.2);
 }
 
-.Rleft img {
-  margin-right: 1rem;
+.sperator::before {
+  left: 0%;
+
 }
+
+.sperator::after {
+  right: 0;
+
+}
+
+.containerSm .mainbtn:nth-child(4) {
+  width: 100%;
+}
+
+.buttonDiv {
+  width: 100%;
+}
+
+.containerSm .mainbtn {
+  width: 100%;
+}
+
+.buttonDiv .mainbtn:nth-child(1) {
+  background: var(--text-color) !important;
+  width: 100%;
+}
+
+.buttonDiv .mainbtn:nth-child(1) svg {
+  font-size: 1.25rem;
+}
+
+.buttonDiv .mainbtn:nth-child(2) {
+  width: 100% !important;
+  background: rgba(24, 119, 242, 1) !important;
+}
+
+.buttonDiv .mainbtn:nth-child(2) a {
+  color: var(--text-color) !important;
+}
+
+.buttonDiv .mainbtn:nth-child(2) svg {
+  color: white;
+  font-size: 1.25rem;
+}
+
 
 /* switchbtn css */
 .switchbtn {
-  margin: 1.2rem 0;
   text-align: center;
 }
 
@@ -374,16 +409,17 @@ section {
 }
 
 .switch label {
+  width: 100%;
   margin-right: 1rem;
   margin-top: 0rem;
   margin-bottom: 0;
   position: relative;
-  width: 50px;
+  width: 60px;
   height: 25px;
   border-radius: 15px;
-  border: 1.5px solid #ffffff;
   cursor: pointer;
   transition: 0.3s;
+  background-color: var(--decorate-color);
 }
 
 .switch label::after {
@@ -392,10 +428,8 @@ section {
   left: 5%;
   top: 55%;
   transform: translate(0%, -50%);
-  width: 35%;
-  height: 100%;
-  /* border-radius: 1px; */
   transition: 0.3s;
+  border: none;
 }
 
 .switch input:checked~label {
@@ -405,7 +439,7 @@ section {
 
 
 .switch input:checked~label::after {
-  translate: 25px 0;
+  translate: 24px 0;
   /* background: #ffffff; */
 }
 
@@ -415,118 +449,159 @@ section {
 }
 
 .switch p {
-  font-size: var(--p2-Paragraph);
-  line-height: 1;
-  text-align: start;
+  color: var(--text-color);
+  font-size: var(--p3-Paragraph);
+  font-weight: 400;
+  line-height: 16.7px;
   margin-bottom: 0;
+  text-align: start !important;
 }
 
-.Rfooter p {
-  margin-bottom: 0;
-  font-size: var(--p2-Paragraph);
+
+/* login page styling */
+
+
+.loginForm {
+  width: 100%;
 }
 
-.Rfooter a {
-  margin-bottom: 0;
+.loginForm label {
+  font-family: 'Helvetica Neue', sans-serif;
   font-size: var(--p2-Paragraph);
+  font-weight: 500;
+  line-height: 19.54px;
+  text-align: left;
+  width: 100%;
 }
 
-.Rfooter span {
+.loginForm input {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  height: 46px;
+  border-radius: 50px;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  color: var(--light-text-color);
+}
+
+.containerSm p span {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: var(--p3-Paragraph);
+  font-weight: 400;
+  line-height: 16.7px;
+  color: var(--decorate-color);
   cursor: pointer;
 }
 
-.Rright .mainbtn,
-.Rright .mainbtnSec {
-  width: 100% !important;
-}
-
-.Rright .mainbtnSec {
-  border: 1px solid var(--text-color);
-}
-
-.Rright .mainbtnSec span {
-  color: var(--text-color);
-}
-
-
-/* login page css */
-
-.logindiv {
-  min-height: 100vh;
-  width: 100vw;
-  border: none;
-}
-
-.loginmaindiv {
+.sperator {
   position: relative;
   width: 100%;
 }
 
-.loginmaindiv section {
-  width: 100%;
-  height: 100%;
-  padding: 0 !important;
-  border: none;
-}
-
-.loginmaindiv .CuratedCards {
-  width: 100%;
-}
-
-.loginformdiv {
+.sperator::before,
+.sperator::after {
+  content: "";
   position: absolute;
-  right: 0%;
-  top: 0;
-  height: 100%;
-  width: 40%;
-  background-color: #1e1e1e40;
-  z-index: 9 !important;
-  backdrop-filter: blur(20px);
-  padding: 4rem 10rem;
-  border-left: .2px solid rgba(255, 255, 255, 0.454);
-  transition: cubic-bezier(0.075, 0.82, 0.165, 1) .3s;
+  height: 1px;
+  width: 45%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sperator::before {
+  left: 0%;
 
 }
 
-.open2 {
-  position: absolute;
-  right: -100% !important;
-  top: 0%;
+.sperator::after {
+  right: 0;
+
 }
 
-.loginformdiv p {
-  font-size: var(--p1-Paragraph);
-  font-family: "Inter" sans-serif;
+/*You & Taste page*/
+
+.pagehadding h1 {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: var(--p1large-Paragraph);
+  color: var(--decorate-color);
+  font-weight: 700;
+  line-height: 29.3px;
+  text-align: left;
+}
+
+.pagehadding p,
+.innerdivtwo > p {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: var(--p3-Paragraph);
   font-weight: 400;
-  color: var(--light-gray-color);
+  line-height: 16.7px;
+  text-align: start;
+  color: var(--light-text-color) !important;
 }
 
-.loginformdiv form label {
-  font-size: var(--p1-Paragraph);
-  font-family: "Inter" sans-serif;
+.containerSm .Categorybtns {
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2)
+}
+
+.innerdivone h4 {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: var(--p2-Paragraph);
   font-weight: 500;
+  line-height: 19.54px;
+  text-align: left;
 }
 
-.loginformdiv .mainbtn {
-  width: 100% !important;
-  margin-top: 1rem;
+.innerdivtwo h4 {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: var(--p2-Paragraph);
+  font-weight: 500;
+  line-height: 19.54px;
+  text-align: left;
 }
 
-.loginformdiv .mainbtn a {
-  font-size: var(--p1-Paragraph) !important;
+
+.innerdivtwo .mainbtn {
+  width: fit-content;
 }
 
 
-.loginformdiv .mainbtnSec {
-  border: 1px solid var(--text-color);
-  margin-bottom: 1rem;
-  width: 100% !important;
+/* experience page */
+.Expreriencediv {
+  min-width: 300px;
 }
 
-.loginformdiv .mainbtnSec a {
-  color: var(--text-color);
-  font-size: var(--p2-Paragraph) !important;
+.Expreriencediv .mainbtn {
+  width: fit-content;
 }
+
+.ECard {
+  grid-template-columns: auto auto auto auto;
+}
+
+.backbtn {
+  font-size: var(--p2-Paragraph);
+  font-weight: 500;
+  line-height: 19.54px;
+  text-align: left;
+  color: var(--text-color) !important;
+}
+
+.backbtn:hover {
+  text-decoration: underline;
+}
+
+
+.taskPerPage p  {
+  color: var(--light-text-color);
+  font-size: var(--p3-Paragraph);
+}
+
+.taskPerPage p svg {
+  font-size: 1.2rem;
+  color: red;
+  margin-right: 5px;
+}
+
 
 
 
@@ -1285,21 +1360,6 @@ input:checked:hover~.rating-counter:before {
   margin: 0 !important;
 }
 
-.Categorybtns {
-  white-space: nowrap;
-  font-size: var(--p1-Paragraph);
-  font-family: "Itren", sans-serif;
-  color: white;
-  height: 46px;
-  padding: 0rem 37px;
-  width: fit-content;
-  border: 1px solid var(--light-gray-color);
-  border-radius: 10px;
-  background: none;
-  user-select: none;
-  cursor: pointer;
-}
-
 .Active {
   background: var(--decorate-color) !important;
   color: black !important;
@@ -1796,9 +1856,23 @@ input:checked:hover~.rating-counter:before {
     justify-content: center;
     background: var(--black-color);
   }
-  .pcontainer h2{
+
+  .pcontainer h2 {
     width: 100%;
   }
+
+  .containerSm {
+    max-width: 350px !important;
+  }
+
+  .Expreriencediv {
+    max-width: 350px;
+  }
+
+  .ECard {
+    grid-template-columns: auto auto auto !important;
+  }
+
 }
 
 @media screen and (max-width:427px) and (min-width:300px) {

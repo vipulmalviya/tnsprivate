@@ -31,7 +31,6 @@ nav .left {
     padding: .5rem 1.5rem;
     position: relative;
     border: 1.5px solid #c2bebe5a;
-    color: #d9d9d9 !important;
     outline: none;
     border-radius: 25px;
     background-color: #0e0e1038;
@@ -47,7 +46,7 @@ nav .left {
 }
 
 .navM input {
-    color: #d9d9d9 !important;
+    color: var(--light-text-colo) ;
     font-size: var(--p2-Paragraph);
     border: none;
     outline: none;
@@ -58,7 +57,7 @@ nav .left {
 .navM input::placeholder {
     font-size: var(--p3-Paragraph);
     font-weight: 400;
-    color: var(--text-color);
+    color: var(--light-text-colo);
 }
 
 .watchlistDiv {
@@ -213,32 +212,11 @@ nav .left {
     right: 0;
 }
 
-.subHeader .container .Categorybtns {
-    border-radius: 70px;
-    background: #FFFFFF1A;
-    border: none;
-    height: 36px;
-    padding: 0rem 20px;
-}
-
 .subHeader .container .at {
     background: var(--decorate-color);
     color: var(--black-color);
 }
 
-
-.subHeader .container .Categorybtns span {
-    font-size: var(--p4-Paragraph);
-    font-weight: 500;
-}
-
-.subHeader .container .Categorybtns:hover {
-    background: #FFFFFF4D !important;
-}
-
-.subHeader .container .at:hover {
-    background: #E7F973 !important;
-}
 
 .subHeader .container .react-multi-carousel-item {
     transform-style: preserve-3d;
