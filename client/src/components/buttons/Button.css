@@ -2,7 +2,7 @@
     background-color: #BACC4A;
     color: var(--black-color);
     padding: 13px 20px 13px 20px;
-    min-width: 150px !important;
+    min-width: 120px !important;
     border-radius: 70px;
     height: 46px;
     cursor: pointer;
@@ -41,7 +41,7 @@
 .mainbtnSec {
     background-color: transparent;
     padding: 13px 20px 13px 20px;
-    min-width: 150px !important;
+    min-width: 120px !important;
     border-radius: 70px;
     height: 46px;
     cursor: pointer;

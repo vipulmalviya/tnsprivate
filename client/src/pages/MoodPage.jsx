@@ -101,10 +101,10 @@ const MoodPage = () => {
                             <Link className='backbtn' rel="stylesheet" to="/"> Back </Link>
                         </div>
                     </div>
-                    <div className='taskPerPage'>
+                    {/* <div className='taskPerPage'>
                         <p className='mb-0 d-flex align-items-center'>{handleError2 ? tick : error} Select at least one category to continue</p>
                         <p className='mb-0 d-flex align-items-center'>{handleError1 ? tick : error}  Choose up to 10 Moods which you like to get suggestions from</p>
-                    </div>
+                    </div> */}
                 </div>
             </section>
         </>

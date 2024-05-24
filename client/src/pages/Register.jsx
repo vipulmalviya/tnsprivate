@@ -10,6 +10,7 @@ import { BsFacebook } from 'react-icons/bs';
 
 const Register = ({ click, prop, open }) => {
     const navigate = useNavigate()
+    const [password, setPassword] = useState(false)
 
     // const [open, setOpen] = useState(false)
     const [email, setEmail] = useState()
@@ -26,6 +27,11 @@ const Register = ({ click, prop, open }) => {
     //         .catch(err => console.log(err));
     //     // console.log(email,pass);
 
+
+    function passfunc(params) {
+        setPassword(!password)
+    }
+
     return (
         <Fragment>
             <SecNav />
@@ -40,12 +46,16 @@ const Register = ({ click, prop, open }) => {
                             <input placeholder='' type="text" />
                         </label>
                         <label className=" gap-1 d-flex flex-column">Password
-                            <input placeholder='' type="text" />
+                            <div className='passwordinput w-100 position-relative'>
+                                <input onChange={(e) => setPass(e.target.value)} autoComplete="current-password" type={password ? "password" : "text"} />
+                                <span onClick={passfunc}>{password ? <IoIosEyeOff /> : <IoIosEye />}</span>
+                            </div>
                         </label>
                         <div className='switchbtn d-flex'>
                             <span className="switch d-flex align-items-start">
                                 <input id="switch-rounded" type="checkbox" />
                                 <label htmlFor="switch-rounded">
+                                    <img src="imgage" alt="" />
                                 </label>
                                 <p className='d-flex align-items-start'>Receive great facts about great cinema,our technical updates and more.</p>
                             </span>

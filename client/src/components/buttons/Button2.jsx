@@ -8,20 +8,20 @@ const Button2 = ({ children, linkprop, propdata1, propdata2 }) => {
   const [clicked, setClicked] = useState(false);
   const isDisabled = !propdata1 || !propdata2 ;
 
-  const handleClick = (event) => {
-    if (isDisabled) {
-      event.preventDefault();
-      if (!clicked) {
-        toast.error(<span>This information is required</span>);
-        setClicked(true);
-      }
-    }
-  };
+  // const handleClick = (event) => {
+  //   if (isDisabled) {
+  //     event.preventDefault();
+  //     if (!clicked) {
+  //       toast.error(<span>This information is required</span>);
+  //       setClicked(true);
+  //     }
+  //   }
+  // };
 
   return (
     <button
       className={`mainbtn align-items-center justify-content-center d-flex  ${isDisabled ? 'disabled' : ''}`}
-      onClick={handleClick}
+      // onClick={handleClick}
     >
       <Link
         className='d-flex align-items-center justify-content-center gap-2 '

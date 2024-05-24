@@ -25,7 +25,7 @@ const Card = ({ index, Poster, Title, catagory, watch, btn, onclick, value }) =>
                          <div className='cardsBtn'>{
                     btn
                         ? <Button value={value} colorProp={ChangeBtn} onClickprop={btnchange}>
-                            {ChangeBtn ? <>{<MdDone />} Added</> : <>{<img height={"15px"} width={"15px"} src="images/cardsplus.svg" alt="icone"/>} Add to Watchlist</>}
+                            {ChangeBtn ? <>{<img height={"15px"} width={"15px"} src="images/fillbookmark.svg" alt="icone"/>} Added</> : <>{<img height={"15px"} width={"15px"} src="images/darkbookmark.svg" alt="icone"/>} Add to Watchlist</>}
                         </Button>
                         : <ButtonSec><LuPencilLine /> Write a Review </ButtonSec>
                 }

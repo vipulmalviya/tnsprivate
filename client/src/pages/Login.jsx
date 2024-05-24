@@ -11,7 +11,7 @@ import { IoIosEye, IoIosEyeOff } from 'react-icons/io';
 import { BsFacebook } from "react-icons/bs"
 
 const Login = ({ clickkro, open2, prop }) => {
-  const navigate = useNavigate()
+  const [password, setPassword] = useState(false)
 
   // const handleSubmit = (e) => {
   //   e.preventDefault();
@@ -25,6 +25,17 @@ const Login = ({ clickkro, open2, prop }) => {
   //     .catch(err => console.log(err));
   // }
 
+
+  function passfunc(params) {
+    setPassword(!password)
+  }
+
+
+  <div className='passwordinput w-100 position-relative'>
+    <input onChange={(e) => setPass(e.target.value)} autoComplete="current-password" type={password ? "password" : "text"} />
+    <span onClick={passfunc}>{password ? <IoIosEye /> : <IoIosEyeOff />}</span>
+  </div>
+
   return (
     <Fragment>
       <SecNav />
@@ -36,10 +47,14 @@ const Login = ({ clickkro, open2, prop }) => {
           </div>
           <form className="loginForm d-flex align-items-center justify-content-center flex-column gap-4">
             <label className="gap-1 d-flex flex-column">Email address
-              <input placeholder='' type="text" />
+              <input placeholder='' type="email" />
             </label>
             <label className=" gap-1 d-flex flex-column">Password
-              <input placeholder='' type="text" />
+              <div className='passwordinput w-100 position-relative'>
+                <input onChange={(e) => setPass(e.target.value)} autoComplete="current-password" type={password ? "password" : "text"} />
+                <span onClick={passfunc}>{password ? <IoIosEyeOff /> : <IoIosEye />}</span>
+              </div>
+              <label className='ForgotBtn'>Forgot Password?</label>
             </label>
             <Button linkprop={"/home"}>log in</Button >
           </form>
@@ -50,7 +65,7 @@ const Login = ({ clickkro, open2, prop }) => {
             <Button><FcGoogle />Continue with Google</Button>
             <Button><BsFacebook />Continue with Facebook</Button>
           </div>
-          <p className='mt-3'>Dont't have an account? <span onClick={() => navigate('/register')} >Signup now!</span ></p>
+          <p className='mt-3'>Dont't have an account? <span onClick={() => navigate('/register')} >Sign Up Now!</span ></p>
         </div>
       </section>
     </Fragment>

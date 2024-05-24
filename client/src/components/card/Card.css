@@ -74,7 +74,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
     transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) .3s;
+}
 
+.cardsBtn svg {
+    color: var(--black-color);
+    font-size: 1rem;
+    stroke-width: 1.3px;
 }
 
 .singlecard:hover .cardbg::before {
@@ -106,11 +111,32 @@
     height: 150px;
     width: 105px;
     border-radius: 5px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    overflow: hidden;
+}
+
+.ExperienceCardDiv img {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
     cursor: pointer;
 }
+
+.ExperienceCardDiv .cardbg {
+    cursor: pointer;
+
+}
+
+.ExperienceCardDiv:hover .cardbg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #00000066;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) .3s;
+}
+
 
 .effect::after {
     content: url("../../../public/images/tick.svg");
@@ -121,23 +147,167 @@
     left: 50%;
     transform: translate(-50%, -50%) !important;
     border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.151) !important;
+    background-color: #00000066;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* .effect {
+
+/* watchlist card */
+
+.modal {
     position: absolute;
-    height: 25%;
-    width: 25%;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.435);
+}
+
+.modal_warrper {
+    position: absolute;
+    min-height: 300px;
+    min-width: 721px;
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid rgba(184, 184, 184, 1);
+    background: rgba(36, 36, 37, 1);
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) !important;
-    display: none;
-} */
+    transform: translate(-50%, -50%);
+}
+.cardHeader h2{
+    font-size: var(--h3-Heading);
+    font-weight: 700;
+}
+.cardHeader p{
+    font-size: var(--p3-Paragraph);
+    font-weight: 400;
+    color: var(--text-color) !important;
+}
+.watchlistAvatar {
+    overflow: hidden;
+    width: 60px;
+    height: 60px;
+    gap: 0px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    opacity: 0px;
+    background: rgba(217, 217, 217, 0.14);
+}
+.dots{
+    height: 100%;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
 
+.modal-left {
+    width: 40%;
+    gap: 20px;
+}
 
+.modal-left .mainbtnSec a {
+    color: var(--decorate-color) !important;
+
+}
+
+.modal-left h3 {
+    font-size: var(--p1-Paragraph);
+    font-weight: 700;
+    line-height: 24.42px;
+    letter-spacing: 0.01em;
+    text-align: left;
+}
+
+.model-input {
+    width: 350px;
+    height: 45px;
+    padding: 11px 30px 11px 30px;
+    gap: 10px;
+    border-radius: 90px;
+    border: 1px solid rgba(184, 184, 184, 0.5);
+    background: rgba(36, 36, 37, 1);
+    color: var(--text-light-color);
+}
+
+.model-input::placeholder {
+    color: rgba(184, 184, 184, 1);
+}
+
+.modal-right {
+    width: 60%;
+    height: 100%;
+    gap: 20px;
+}
+
+.modal-right h1 {
+    font-size: var(--h3-Heading);
+    margin-bottom: 0;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 39.07px;
+    letter-spacing: 0.01em;
+    text-align: left;
+
+}
+
+/* wathlist card */
+
+.Card-wrapper {
+    position: relative;
+    /* width: 0%; */
+    min-height: 285px;
+    padding: 41px 40px 41px 40px;
+    gap: 10px;
+    border-radius: 20px;
+    background: rgba(40, 40, 41, 1);
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+
+.Card-wrapper:hover {
+    border: 1px solid white;
+}
+
+.wathlistOptions {
+    bottom: -30%;
+    left: 30%;
+    background: rgba(40, 40, 41, 1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    min-width: 250px;
+    min-height: 99px;
+    gap: 3px;
+    border-radius: 10px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.wathlistOptions>ul {
+    width: 100%;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.wathlistOptions>ul>li {
+    width: 100%;
+    color: rgba(179, 179, 179, 1);
+    font-size: (--p3-Paragraph);
+    font-weight: 400;
+    line-height: 16.7px;
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 12px 10%;
+    gap: 10px;
+    border-radius: 10px;
+}
+
+.wathlistOptions>ul>li:hover {
+    background: rgba(54, 54, 57, 1);
+}
+.wathlistOptions>ul>li svg {
+    font-size: 1.2rem;
+}
 
 
 @media screen and (max-width: 428px) {

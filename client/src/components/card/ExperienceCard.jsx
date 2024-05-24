@@ -10,8 +10,11 @@ const ExperienceCard = ({ imageUrl, title }) => {
 
     return (
         <>
-            <div onClick={onclick} className='ExperienceCardDiv d-flex align-items-center justify-content-center' style={{ backgroundImage: `url(${imageUrl})` }}>
-                <div className={Click ? "effect" : ""}></div>
+            <div onClick={onclick} className='ExperienceCardDiv d-flex align-items-center justify-content-center'>
+                <div className='cardbg d-flex'>
+                <img src={imageUrl} alt="" />
+                <div className={`hover ${Click ? "effect" : ""}`}></div>
+                </div>
             </div >
         </>
     )

@@ -75,7 +75,7 @@ const Nav = ({ setQuery, query }) => {
                                 <CiSearch />
                             </form>
                             <div className='watchlistDiv d-flex gap-2 align-items-center'>
-                                <img height={"100%"} width={"100%"} src="images/watchlistplus.svg" alt="watchlist plus icone" />
+                                <img height={"100%"} width={"100%"} src="images/bookmark.svg" alt="watchlist icone" />
                                 <p>My Watchlist</p>
                             </div>
                             <img data-toggle="tooltip" title="My Profile" height={"35px"} width={"35px"} src="images/Ellipse 33.svg" alt="" />

@@ -101,10 +101,10 @@ const TastePage = () => {
               <Button2 propdata1={handleError1} propdata2={handleError2} linkprop={"/moodPage"}>Continue</Button2>
             </div>
           </div>
-          <div className='taskPerPage'>
+          {/* <div className='taskPerPage'>
             <p className='mb-0 d-flex align-items-center'>{handleError2 ? tick : error} Select at least one category to continue</p>
             <p className='mb-0 d-flex align-items-center'>{handleError1 ? tick : error}  Choose up to 10 genres which you like to get suggestions from</p>
-          </div>
+          </div> */}
         </div>
       </section>
     </>

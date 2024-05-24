@@ -76,10 +76,12 @@ nav .left {
 }
 
 .watchlistDiv svg {
-    transform: rotate(271deg);
     color: var(--decorate-color);
-    font-size: 1.4rem;
+    font-size: 1rem;
+    stroke-width: 1.3px;
 }
+
+
 
 .hamburgur {
     cursor: pointer;

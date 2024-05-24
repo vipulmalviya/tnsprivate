@@ -238,32 +238,6 @@ const ExpreriencePage = () => {
         },
 
     ];
-    // const [selectedGenres, setSelectedGenres] = useState([]);
-
-    // handleGenreSelect = (genre) => {
-    //     setSelectedGenres((prevSelected) => {
-    //         if (prevSelected.includes(genre)) {
-    //             return prevSelected.filter(g => g !== genre);
-    //         } else if (prevSelected.length < 10) {
-    //             return [...prevSelected, genre];
-    //         } else {
-    //             return prevSelected;
-    //         }
-    //     });
-    // };
-
-    // const [handleError1, setHandleError1] = useState(false)
-
-    // useEffect(() => {
-
-    //     if (selectedGenres.length > 0) {
-    //         setHandleError1(true)
-    //     } else {
-    //         setHandleError1(false)
-    //     }
-       
-    // }, [selectedGenres])
-
 
     return (
         <>

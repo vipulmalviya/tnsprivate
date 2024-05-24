@@ -1,5 +1,5 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap'); */
-@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
+/* @import url('https://fonts.cdnfonts.com/css/helvetica-neue-55'); */
 
 * {
   margin: 0;
@@ -228,11 +228,6 @@ section {
   justify-content: center;
 }
 
-/* .Rleft li span {
-  font-size: var(--p2-Paragraph);
-  font-family: "Inter" sans-serif;
-  font-weight: 500;
-} */
 
 .Rleft img {
   margin-right: 1rem;
@@ -246,12 +241,23 @@ section {
   font-size: 1.2rem;
   cursor: pointer;
   position: absolute;
-  left: 0;
+  right: 0;
   top: 50%;
   transform: translate(-50%, -50%);
-  display: none;
 }
-
+.ForgotBtn{
+  color: var(--decorate-color);
+  font-family: Helvetica Neue;
+  font-size: var(--p3-Paragraph);
+  font-weight: 500;
+  line-height: 17.09px;
+  text-align: left;
+  margin-top: 1px;
+  cursor: pointer;
+}
+.ForgotBtn:hover{
+  text-decoration: underline;
+}
 
 /* ragister page css  */
 /* left css */
@@ -292,15 +298,6 @@ section {
 }
 
 /* form css */
-
-.containerSm h1 {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-size: var(--p1large-Paragraph);
-  color: var(--decorate-color);
-  font-weight: 700;
-  line-height: 29.3px;
-  text-align: left;
-}
 
 .registerForm {
   width: 100%;
@@ -414,33 +411,40 @@ section {
   margin-top: 0rem;
   margin-bottom: 0;
   position: relative;
-  width: 60px;
-  height: 25px;
+  width: 50px;
+  height: 20px;
   border-radius: 15px;
-  cursor: pointer;
   transition: 0.3s;
-  background-color: var(--decorate-color);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
 }
 
 .switch label::after {
-  content: url("../public/images/Frame 556.svg");
+  content: url("images/check.svg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  left: 5%;
-  top: 55%;
+  background-color: white;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  left: 0%;
+  top: 50%;
   transform: translate(0%, -50%);
   transition: 0.3s;
   border: none;
+  cursor: pointer;
 }
 
 .switch input:checked~label {
-  /* border-color: #ffffff; */
+  cursor: pointer;
   background-color: var(--decorate-color);
 }
 
 
 .switch input:checked~label::after {
-  translate: 24px 0;
-  /* background: #ffffff; */
+  translate: 18px 0;
 }
 
 .switch input:disabled~label {
@@ -529,7 +533,7 @@ section {
 }
 
 .pagehadding p,
-.innerdivtwo > p {
+.innerdivtwo>p {
   font-family: 'Helvetica Neue', sans-serif;
   font-size: var(--p3-Paragraph);
   font-weight: 400;
@@ -591,7 +595,7 @@ section {
 }
 
 
-.taskPerPage p  {
+.taskPerPage p {
   color: var(--light-text-color);
   font-size: var(--p3-Paragraph);
 }
@@ -606,31 +610,73 @@ section {
 
 
 /* watchlist page */
-.headersection {
-  padding-top: 4rem !important;
-  color: white;
-  border-bottom: .5px solid rgba(128, 128, 128, 0.597);
+
+
+
+.headersection .container {
+  gap: 20px;
+}
+
+.headersection h1 {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 700;
+  font-size: var(--h3-Heading) !important;
+  margin-bottom: 0;
+}
+
+.myWatchlistDiv {
+  min-height: 180px;
+  width: 100%;
+  background: rgba(186, 204, 74, 0.03);
+  border: 2px dashed rgba(255, 255, 255, 0.2);border-radius: 20px;
+  opacity: 0px;
+  cursor: pointer;
+}
+
+.myWatchlistDiv svg {
+  color: var(--decorate-color);
+  font-size: 2.5rem;
+}
+
+.myWatchlistDiv p {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24.42px;
+  text-align: center;
+}
+.headersection .pagehadding svg{
+  color: var(--decorate-color);
+  font: 1.2rem;
 }
 
 .header {
-  justify-content: flex-start !important;
+
   gap: 3rem;
   margin-bottom: 3rem;
   align-items: center;
 }
 
 .header h2 {
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: "HalyardBold", sans-serif;
   font-weight: 800;
   font-size: var(--h3-Heading) !important;
   margin-bottom: 0;
 }
 
 .header p {
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: var(--p2-Paragraph) !important;
   font-weight: 400;
+}
+
+.cardContaienr{
+  width: 100%;
+  height: 70vh;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 }
 
 .watchlistbtn {
@@ -639,6 +685,7 @@ section {
 
 .watchlistbtn svg {
   font-size: 3rem;
+  margin-right: 1rem;
   color: var(--decorate-color);
 }
 
@@ -646,55 +693,8 @@ section {
   stroke-width: 15;
 }
 
-.watchlistCard {
-  position: relative;
-  /* min-height: 50vh; */
-  max-width: 49%;
-  padding: 2rem;
-  border-radius: 25px;
-  background-color: #282829;
-  border: 1px solid rgba(255, 255, 255, 0.143);
-}
 
-.watchlistCard h3 {
-  font-size: var(--h4-Heading);
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 800;
-}
 
-.titlecount {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-size: var(--p3-Paragraph);
-  font-weight: 800;
-}
-
-.cardContainer {
-  width: 100%;
-  gap: 1rem;
-  margin: 1rem 0;
-}
-
-.cardContainer .card {
-  height: 348px;
-  /* width: 100%; */
-  margin: .5rem;
-  border-radius: 10px;
-  background-position: center;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-}
-
-.watchlistCards {
-  gap: 2rem;
-  width: 100%;
-  margin: 2rem 0 0 0;
-}
-
-.progress {
-  width: 100%;
-  height: 7px;
-  margin: 1rem 0 0 0;
-}
 
 .cardHeaders {
   justify-content: space-between !important;
@@ -714,6 +714,9 @@ section {
 .singlecard .movieDetails .mainbtnSec a {
   color: var(--decorate-color);
 }
+
+
+
 
 
 /* single movie page  */
