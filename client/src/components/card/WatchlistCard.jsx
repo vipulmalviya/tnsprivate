@@ -5,7 +5,7 @@ import "./Card.css"
 import WathlistOptionCard from './WathlistOptionCard'
 
 
-const WatchlistCard = () => {
+const WatchlistCard = ({openList}) => {
 
     const cardsArray = [
         {
@@ -67,7 +67,7 @@ const WatchlistCard = () => {
                         <p>{elem.whoCreateWathlist}</p>
                     </div>
                     <div className='d-flex align-items-center justify-content-center gap-3'>
-                        <Button onClick={onclick}>Manage</Button>
+                        <Button onclick={openList}>Manage</Button>
                         <div onClick={() => setShowOption(index === ShowOption ? -1 : index)} className='dots d-flex justify-content-center'>...</div>
                     </div>
                     {ShowOption === index && <WathlistOptionCard />}

@@ -122,6 +122,13 @@ a {
   color: var(--dark-background-color);
 }
 
+
+button {
+  background: transparent;
+  border: none;
+}
+
+
 /* input:focus{
   outline: none !important;
 } */
@@ -213,7 +220,7 @@ section {
 }
 
 .hinglight {
-  color: var(--decorate-color);
+  color: var(--decorate-color) !important;
 }
 
 .Rleft p {
@@ -245,7 +252,8 @@ section {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-.ForgotBtn{
+
+.ForgotBtn {
   color: var(--decorate-color);
   font-family: Helvetica Neue;
   font-size: var(--p3-Paragraph);
@@ -255,7 +263,8 @@ section {
   margin-top: 1px;
   cursor: pointer;
 }
-.ForgotBtn:hover{
+
+.ForgotBtn:hover {
   text-decoration: underline;
 }
 
@@ -628,7 +637,8 @@ section {
   min-height: 180px;
   width: 100%;
   background: rgba(186, 204, 74, 0.03);
-  border: 2px dashed rgba(255, 255, 255, 0.2);border-radius: 20px;
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
   opacity: 0px;
   cursor: pointer;
 }
@@ -645,7 +655,8 @@ section {
   line-height: 24.42px;
   text-align: center;
 }
-.headersection .pagehadding svg{
+
+.headersection .pagehadding svg {
   color: var(--decorate-color);
   font: 1.2rem;
 }
@@ -671,7 +682,7 @@ section {
   font-weight: 400;
 }
 
-.cardContaienr{
+.cardContaienr {
   width: 100%;
   height: 70vh;
   gap: 20px;
@@ -692,6 +703,68 @@ section {
 .watchlistbtn svg path {
   stroke-width: 15;
 }
+
+.watchlistInfoSection {
+  background: #444D0D;
+  height:35vh;
+}
+
+.watchlistsInfo>.watchlistAvatar {
+  height: 100px;
+  width: 100px;
+}
+
+.watchlistsInfo .pagehadding h2 {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 58.61px;
+  text-align: left;
+}
+
+.watchlistsInfo .pagehadding p {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: var(--p2-Paragraph);
+  font-weight: 400;
+  line-height: 19.09px;
+  text-align: left;
+  color: var(--text-color) !important;
+}
+
+.watchlistsInfo .pagehadding p>span {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: var(--p2-Paragraph);
+  font-weight: 500;
+  line-height: 19.54px;
+}
+
+.listHead {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.listHead p {
+  font-size: var(--p2-Pragraph);
+  font-weight: 500;
+  line-height: 19.54px;
+  text-align: left;
+}
+
+.listItemsSection {
+  margin-top: -5rem;
+  padding-top: 1rem !important;
+  background: #FFFFFF0D;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -714,10 +787,6 @@ section {
 .singlecard .movieDetails .mainbtnSec a {
   color: var(--decorate-color);
 }
-
-
-
-
 
 /* single movie page  */
 
@@ -1182,8 +1251,6 @@ input:checked:hover~.rating-counter:before {
 .right>.mainbtnSec a {
   color: var(--decorate-color) !important;
 }
-
-
 
 /* single curated list page  */
 

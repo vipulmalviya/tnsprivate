@@ -1,0 +1,70 @@
+.listItem {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.listItem:hover {
+    background: #FFFFFF0D;
+}
+
+.div1 {
+    grid-column-start: 0;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.div2 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-left: 4rem;
+}
+
+.div3 {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.div4 {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.div5 {
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.div6 {
+    grid-column-start: 7;
+    grid-column-end: 8;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.listItem h4 {
+    font-size: var(--p1-Paragraph);
+    font-weight: 700;
+    line-height: 24.42px;
+}
+
+.listItem p {
+    font-size: var(--p3-Paragraph);
+    font-weight: 400;
+    line-height: 16.7px;
+    color: var(--light-text-color);
+}
+
+.listItem svg {
+    font-size: 1.4rem;
+}
