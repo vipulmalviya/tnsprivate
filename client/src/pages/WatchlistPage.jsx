@@ -11,6 +11,8 @@ import WatchlistCard from '../components/card/WatchlistCard.jsx';
 import { FiTag } from "react-icons/fi";
 import List from '../components/dragableList/List.jsx';
 import { PiUsersBold } from 'react-icons/pi';
+import WathlistOptionCard from '../components/card/WathlistOptionCard.jsx';
+import { LuPen } from 'react-icons/lu';
 
 
 const data = [
@@ -52,6 +54,8 @@ const data = [
   }
 ]
 
+
+
 const items = [
   { number: 1, title: 'Movie 1', genres: 'Action', year: 2021, duration: '2h', rating: '92.5', userRating: '98%(1.2k)', tag: 'Masterpiece', imageUrl: "images/12fail.png", },
   { number: 2, title: 'Movie 1', genres: 'Action', year: 2021, duration: '2h', rating: '92.5', userRating: '98%(1.2k)', tag: 'Masterpiece', imageUrl: "images/12fail.png", },
@@ -80,38 +84,41 @@ const handleDrop = (e, index) => {
     number: idx + 1
   }));
 
-  setItems(updatedItems);
 };
 
 
 const responsive = {
   superlargedesktop: {
-    breakpoint: { max: 4000, min: 1024 },
-    items: 6,
+      breakpoint: { max: 4000, min: 1860 },
+      items: 7,
   },
   desktop: {
-    breakpoint: { max: 1024, min: 800 },
-    items: 6,
+      breakpoint: { max: 1860, min: 1280 },
+      items: 5.7,
   },
   tablet: {
-    breakpoint: { max: 800, min: 464 },
-    items: 2.5,
+      breakpoint: { max: 1024, min: 464 },
+      items: 2.5,
   },
   mobile: {
-    // margin:"200px",
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
+      breakpoint: { max: 464, min: 0 },
+      items: 1.5,
   }
 };
-
 const WatchlistPage = () => {
+
+  const [ShowOption, setShowOption] = useState(false)
 
   const [ModalShow, setModalShow] = useState(false)
   // const [watchlists, setWatchlists] = useState([]);
   const [isCardsShow, setIsCardsShow] = useState(false);
   const [Manage, setManage] = useState(false);
-  
 
+
+
+  function showoptin() {
+    setShowOption(!ShowOption)
+  }
 
   function modalshow() {
     setModalShow(!ModalShow)
@@ -133,7 +140,11 @@ const WatchlistPage = () => {
           <div className='d-flex align-items-center justify-content-between w-100'>
             <div className="watchlistsInfo d-flex align-items-center justify-content-start">
               <div className="watchlistAvatar mx-3">
-                <img height={"100%"} width={"100%"} src="https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg?size=626&ext=jpg&ga=GA1.1.516356470.1716545116&semt=sph" alt="" />
+                <img height={"100%"} width={"100%"} src="https://img.freepik.com/free-vector/mysterious-mafia-man-smoking-cigarette_52683-34828.jpg?w=740&t=st=1716545127~exp=1716545727~hmac=b06f7f7f6ababecdd569f3849519e0f8971d75936cab68ca367eca074bbea299" alt="" />
+                <button className='AvatarBtn position-absolute d-flex flex-column align-items-center justify-content-center'>
+                  <LuPen />
+                  Choose Avatar
+                </button>
               </div>
               <div className='pagehadding'>
                 <p className='mb-0'>Watchlist</p>
@@ -141,19 +152,21 @@ const WatchlistPage = () => {
                 <p className=' d-flex align-items-center justify-content-start gap-2'><span>Rahul Malviya</span> . <span>8 Movies</span> . <span>2 TV Series</span></p>
               </div>
             </div>
-            <IoMdMore style={{ fontSize: "2rem", }} />
+            <button className="position-relative"><IoMdMore onClick={showoptin} style={{ color: "#FFFF", fontSize: "1.5rem", }} />
+              {ShowOption && <WathlistOptionCard />}
+            </button>
           </div>
         </div>
       </section>
         <section className='listItemsSection'>
           <div className='listHead container d-grid align-items-center justify-content-center my-3'>
             <p className='div1 number mb-0 d-flex align-items-center justify-content-center mx-3'>#</p>
-            <div className='div2 d-flex align-items-center justify-content-start gap-3'>
+            <p className='div2 mb-0 d-flex align-items-center justify-content-start gap-3'>
               <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 3.8335C1.5 3.05693 1.5 2.66864 1.62687 2.36236C1.79602 1.95398 2.12048 1.62952 2.52886 1.46036C2.83515 1.3335 3.22343 1.3335 4 1.3335H14C14.7766 1.3335 15.1649 1.3335 15.4711 1.46036C15.8795 1.62952 16.204 1.95398 16.3731 2.36236C16.5 2.66864 16.5 3.05693 16.5 3.8335C16.5 4.61007 16.5 4.99835 16.3731 5.30464C16.204 5.71302 15.8795 6.03747 15.4711 6.20663C15.1649 6.3335 14.7766 6.3335 14 6.3335H4C3.22343 6.3335 2.83515 6.3335 2.52886 6.20663C2.12048 6.03747 1.79602 5.71302 1.62687 5.30464C1.5 4.99835 1.5 4.61007 1.5 3.8335Z" stroke="white" stroke-width="1.5" />
                 <path d="M1.5 12.1668C1.5 11.3903 1.5 11.002 1.62687 10.6957C1.79602 10.2873 2.12048 9.96285 2.52886 9.7937C2.83515 9.66683 3.22343 9.66683 4 9.66683H14C14.7766 9.66683 15.1649 9.66683 15.4711 9.7937C15.8795 9.96285 16.204 10.2873 16.3731 10.6957C16.5 11.002 16.5 11.3903 16.5 12.1668C16.5 12.9434 16.5 13.3317 16.3731 13.638C16.204 14.0463 15.8795 14.3708 15.4711 14.54C15.1649 14.6668 14.7766 14.6668 14 14.6668H4C3.22343 14.6668 2.83515 14.6668 2.52886 14.54C2.12048 14.3708 1.79602 14.0463 1.62687 13.638C1.5 13.3317 1.5 12.9434 1.5 12.1668Z" stroke="white" stroke-width="1.5" />
               </svg>
-              Title</div>
+              Title</p>
             <div className='div3'>
               <img src="images/latestlogo.svg" alt="" />
             </div>
@@ -199,10 +212,10 @@ const WatchlistPage = () => {
           <div className="container">
             <div className='header d-flex align-items-center'>
               <h2>My Watchlist</h2>
-              <p onClick={modalshow} className='watchlistbtn mb-0 '><IoAddCircleOutline />Create New Watchlist</p>
+              <p onClick={modalshow} className='watchlistbtn mb-0'><IoAddCircleOutline />Create New Watchlist</p>
             </div>
             <div className='cardContaienr d-grid'>
-              <WatchlistCard  openList={mangefunc}/>
+              <WatchlistCard openList={mangefunc} />
             </div>
           </div>
         </section>

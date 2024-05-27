@@ -40,7 +40,7 @@ const Login = ({ clickkro, open2, prop }) => {
     <Fragment>
       <SecNav />
       <section className='fullSection border-0 d-flex align-items-start justify-content-center'>
-        <div className="px-4  containerSm d-flex align-items-start justify-content-cente flex-column gap-2">
+        <div className="containerSm d-flex align-items-start justify-content-cente flex-column gap-2">
           <div className='pagehadding'>
             <h1>Welcome to The Next Stream!</h1>
             <p>Your gateway to personalised movie and TV series recommendations.</p>

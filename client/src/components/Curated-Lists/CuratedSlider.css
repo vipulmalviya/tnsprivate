@@ -58,6 +58,7 @@
 }
 
 .CardContainer {
+    width: 100%;
     overflow: hidden;
     transform: translateY(2rem);
     transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) .3s;
@@ -100,7 +101,6 @@
 @media screen and (max-width: 428px) {
 
     .CuratedCards .card {
-        padding: .5rem;
         height: 500px;
     }
 
@@ -116,11 +116,10 @@
     .SectionLablediv {
         justify-content: space-between !important;
         padding: 0;
-        margin-bottom: 2rem;
         align-items: flex-start !important;
     }
 
-    .SectionLablediv>* {
+    .SectionLablediv>* , .SectionLable {
         margin-bottom: 0;
         width: 60%;
     }
@@ -128,6 +127,6 @@
     .SectionLablediv>span {
         justify-content: flex-end !important;
         width: 30%;
-        margin-top: 1rem;
+        /* margin-top: 1rem; */
     }
 }

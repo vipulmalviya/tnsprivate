@@ -60,6 +60,7 @@
     bottom: -6% !important;
     opacity: 1 !important;
 }
+
 .caption .movieBtns {
     min-width: 80%;
     transform: translateY(300%);
@@ -124,6 +125,9 @@
     background: var(--decorate-color) !important;
 }
 
+.aboutMovie div:first-child {
+    gap: 2rem;
+}
 .aboutMovie p {
     font-size: var(--p3-Paragraph);
     color: var(--light-gray-color);
@@ -239,7 +243,7 @@
 @media screen and (max-width:428px) {
     .swiper-slide .caption {
         height: fit-content;
-        max-width: 300px;
+        max-width: 100%;
         padding: 1rem;
     }
 
@@ -247,13 +251,17 @@
         padding: 1rem !important;
     }
 
+    .aboutMovie div:first-child {
+        gap: 0rem;
+    }
+
     .movieBtns {
         flex-direction: row !important;
     }
 
     .swiper-slide {
-        width: 90%;
-        height: 90%;
+        width: 80%;
+        height: 70%;
     }
 
     .slider-controler .slider-arrow {

@@ -1,5 +1,6 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap'); */
 /* @import url('https://fonts.cdnfonts.com/css/helvetica-neue-55'); */
+/* @import url('https://fonts.cdnfonts.com/css/helvetica-neue-55'); */
 
 * {
   margin: 0;
@@ -64,11 +65,6 @@ body::-webkit-scrollbar {
     --h1-Heading: 2rem;
     --h2-Heading: 1.875rem;
     --h3-Heading: 1.5rem;
-    --h4-Heading: 1.25rem;
-    --h5-Heading: 1.22rem;
-    --h6-Heading: 0.875rem;
-
-
     /* Text Sizes */
     --p1-Paragraph: 1rem;
     --p2-Paragraph: 0.875rem;
@@ -154,6 +150,7 @@ section {
 
 .containerSm {
   max-width: 455px !important;
+  padding: 1rem;
 }
 
 /* Craft Your Watchlist */
@@ -420,7 +417,7 @@ section {
   margin-top: 0rem;
   margin-bottom: 0;
   position: relative;
-  width: 50px;
+  width: 60px;
   height: 20px;
   border-radius: 15px;
   transition: 0.3s;
@@ -429,7 +426,7 @@ section {
 }
 
 .switch label::after {
-  content: url("images/check.svg");
+  content: url("../public/images/check.svg");
   display: flex;
   align-items: center;
   justify-content: center;
@@ -453,7 +450,7 @@ section {
 
 
 .switch input:checked~label::after {
-  translate: 18px 0;
+  translate: 25px 0;
 }
 
 .switch input:disabled~label {
@@ -662,21 +659,20 @@ section {
 }
 
 .header {
-
   gap: 3rem;
   margin-bottom: 3rem;
   align-items: center;
 }
 
 .header h2 {
-  font-family: "HalyardBold", sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
   font-weight: 800;
   font-size: var(--h3-Heading) !important;
   margin-bottom: 0;
 }
 
 .header p {
-  font-family: "Inter", sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
   font-weight: 400;
   font-size: var(--p2-Paragraph) !important;
   font-weight: 400;
@@ -684,10 +680,9 @@ section {
 
 .cardContaienr {
   width: 100%;
-  height: 70vh;
-  gap: 20px;
+  min-height: 70vh;
+  gap: 16px;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
 }
 
 .watchlistbtn {
@@ -706,17 +701,41 @@ section {
 
 .watchlistInfoSection {
   background: #444D0D;
-  height:35vh;
+  min-height: 35vh;
 }
 
+
 .watchlistsInfo>.watchlistAvatar {
+  position: relative;
   height: 100px;
   width: 100px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.watchlistsInfo>.watchlistAvatar:hover .AvatarBtn {
+  background: rgba(0, 0, 0, 0.608);
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.watchlistsInfo .AvatarBtn {
+  color: var(--text-color);
+  font-size: 1rem;
+  transition: cubic-bezier(0.55, 0.055, 0.675, 0.19) .1s;
+}
+
+.watchlistsInfo .AvatarBtn svg {
+  color: var(--decorate-color);
+  font-size: 1.3rem;
 }
 
 .watchlistsInfo .pagehadding h2 {
   font-family: 'Helvetica Neue', sans-serif;
-  font-size: 48px;
+  font-size: var(--h2-Heading);
   font-weight: 700;
   line-height: 58.61px;
   text-align: left;
@@ -739,13 +758,12 @@ section {
 }
 
 .listHead {
-  display: grid;
   grid-template-columns: repeat(6, 1fr);
 }
 
 .listHead p {
-  font-size: var(--p2-Pragraph);
-  font-weight: 500;
+  font-size: var(--p1-Pragraph) !important;
+  font-weight: 700;
   line-height: 19.54px;
   text-align: left;
 }
@@ -1831,11 +1849,16 @@ input:checked:hover~.rating-counter:before {
   }
 
   .header {
-    flex-direction: column;
     align-items: flex-start;
-    gap: 1rem;
-    justify-content: flex-start;
+    justify-content: space-between;
   }
+
+  .watchlistbtn {
+    display: flex;
+    align-items: center;
+    flex-direction: column !important;
+  }
+
 
   .pcontainer {
     flex-direction: column;
@@ -1854,7 +1877,6 @@ input:checked:hover~.rating-counter:before {
     width: 100%;
     bottom: 10%;
     left: 0%;
-    /* transform: translate(0% , -10%); */
   }
 
   .watchlistCards {
@@ -1941,6 +1963,40 @@ input:checked:hover~.rating-counter:before {
 
   .ECard {
     grid-template-columns: auto auto auto !important;
+  }
+
+  .cardContaienr {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .watchlistbtn svg {
+    margin-right: 0.5rem;
+    color: var(--decorate-color);
+  }
+
+  .watchlistInfoSection .container>div {
+    position: relative;
+    width: 100%;
+    justify-content: center !important;
+  }
+
+  .watchlistInfoSection .container>div button {
+    align-self: flex-start;
+  }
+
+  .watchlistInfoSection .watchlistsInfo {
+    flex-direction: column;
+  }
+
+  .listItemsSection {
+    margin-top: 0;
+  }
+
+  .listHead {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .div3, .div4 ,.div5{
+    display: none !important;
   }
 
 }

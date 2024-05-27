@@ -145,8 +145,8 @@ const HomeSlider = () => {
                                 <div className='caption slider-active d-flex flex-column justify-content-end align-items-start gap-2'>
                                     <img height={"40%"} width={"40%"} src="images/BestOfAllTime.svg" alt="brand logo" />
                                     <h2>{elem.Titlelogo}</h2>
-                                    <div className='w-100 aboutMovie d-flex justify-content-center align-items-start flex-column mb-2 gap-3'>
-                                        <div className='d-flex gap-3'>
+                                    <div className=' w-100 aboutMovie d-flex justify-content-center align-items-start flex-column mb-2 gap-3'>
+                                        <div className='d-flex'>
                                             <p className='mb-0'>{elem.Genre}</p>
                                             <p className='mb-0'>{elem.Release_Date}</p>
                                             <p className='mb-0'>{elem.Runtime}</p>

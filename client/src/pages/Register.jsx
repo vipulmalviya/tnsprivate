@@ -36,7 +36,7 @@ const Register = ({ click, prop, open }) => {
         <Fragment>
             <SecNav />
             <section className='fullSection border-0 d-flex align-items-start justify-content-center'>
-                <div className="px-4 containerSm d-flex align-items-start justify-content-cente flex-column gap-2">
+                <div className="containerSm d-flex align-items-start justify-content-cente flex-column gap-2">
                     <div className='pagehadding'>
                         <h1>Create an TNS account </h1>
                         <p>It will help provide you a specific room for your saved information</p>

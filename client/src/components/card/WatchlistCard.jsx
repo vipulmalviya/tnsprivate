@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom'
 import Button from '../buttons/Button'
 import "./Card.css"
 import WathlistOptionCard from './WathlistOptionCard'
+import { IoMdMore } from 'react-icons/io'
+import { FiMoreHorizontal } from 'react-icons/fi'
 
 
-const WatchlistCard = ({openList}) => {
+const WatchlistCard = ({ openList }) => {
 
     const cardsArray = [
         {
@@ -58,9 +60,9 @@ const WatchlistCard = ({openList}) => {
     return (
         <>
             {cardsArray.map((elem, index) => {
-                return <div ref={wrapperRef}  key={index} className='Card-wrapper d-flex flex-column align-items-start justify-content-center gap-3' style={{ backgroundColor: elem.bgcolor, }}>
+                return <div ref={wrapperRef} key={index} className='Card-wrapper d-flex flex-column align-items-start justify-content-center gap-3' style={{ backgroundColor: elem.bgcolor, }}>
                     <div className="watchlistAvatar">
-                        <img width={"100%"} height={"100%"} src={elem.avatarurl} alt="" />
+                        <img width={"54px"} height={"54px"} src={elem.avatarurl} alt="" />
                     </div>
                     <div className="cardHeader">
                         <h2>{elem.watchlistTitle}</h2>
@@ -68,9 +70,10 @@ const WatchlistCard = ({openList}) => {
                     </div>
                     <div className='d-flex align-items-center justify-content-center gap-3'>
                         <Button onclick={openList}>Manage</Button>
-                        <div onClick={() => setShowOption(index === ShowOption ? -1 : index)} className='dots d-flex justify-content-center'>...</div>
+                        <button className="position-relative"><FiMoreHorizontal onClick={() => setShowOption(index === ShowOption ? -1 : index)} style={{ color: "#FFFF", }} />
+                            {ShowOption === index && <WathlistOptionCard />}
+                        </button>
                     </div>
-                    {ShowOption === index && <WathlistOptionCard />}
                 </div>
             })}
         </>

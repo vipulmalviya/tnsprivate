@@ -165,35 +165,32 @@
 
 .modal_warrper {
     position: absolute;
-    min-height: 300px;
-    min-width: 721px;
+    min-height: 290px;
+    max-width: 680px;
     border-radius: 20px;
-    padding: 30px;
+    padding: 50px;
     border: 1px solid rgba(184, 184, 184, 1);
     background: rgba(36, 36, 37, 1);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    gap: 20px;
 }
+
 .cardHeader h2{
     font-size: var(--h3-Heading);
     font-weight: 700;
 }
 .cardHeader p{
+    margin-bottom: 0;
     font-size: var(--p3-Paragraph);
     font-weight: 400;
     color: var(--text-color) !important;
 }
-.watchlistAvatar {
-    overflow: hidden;
-    width: 60px;
-    height: 60px;
-    gap: 0px;
+.watchlistAvatar img{
     border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    opacity: 0px;
-    background: rgba(217, 217, 217, 0.14);
 }
+
 .dots{
     height: 100%;
     font-weight: 800;
@@ -201,7 +198,8 @@
 }
 
 .modal-left {
-    width: 40%;
+    height: 100%;
+    width: fit-content;
     gap: 20px;
 }
 
@@ -216,10 +214,11 @@
     line-height: 24.42px;
     letter-spacing: 0.01em;
     text-align: left;
+    margin-bottom: 0
 }
 
-.model-input {
-    width: 350px;
+.modal-input {
+    width: 400px;
     height: 45px;
     padding: 11px 30px 11px 30px;
     gap: 10px;
@@ -229,12 +228,12 @@
     color: var(--text-light-color);
 }
 
-.model-input::placeholder {
+.modal-input::placeholder {
     color: rgba(184, 184, 184, 1);
 }
 
 .modal-right {
-    width: 60%;
+    width: 80%;
     height: 100%;
     gap: 20px;
 }
@@ -269,11 +268,11 @@
 }
 
 .wathlistOptions {
-    bottom: -30%;
-    left: 30%;
+    top: 40px;
+    right: 30px;
     background: rgba(40, 40, 41, 1);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    min-width: 250px;
+    min-width: 220px;
     min-height: 99px;
     gap: 3px;
     border-radius: 10px;
@@ -309,10 +308,13 @@
     font-size: 1.2rem;
 }
 
+
+
+/* @media screen and (max-width: 1860px) and (min-width: 1280px) {
+
+
+} */
 @media screen and (max-width: 428px) {
-    .movieDetails {
-        min-height: 140px;
-    }
 
     .singlecard {
         width: 100% !important;
@@ -351,4 +353,31 @@
         color: #D9D9D9;
     }
 
+    .modal_warrper{
+        min-width: 300px;
+        flex-direction: column;
+        padding: 20px;
+    }
+    .modal-left{
+        width: 100%;
+    }
+    .modal-right{
+        width: 100%;
+    }
+    .modal-input{
+        width: 100%;
+    }
+
+    .wathlistOptions {
+        top: 40px;
+        right: -10px;
+        background: rgba(40, 40, 41, 1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        min-width: 220px;
+        min-height: 99px;
+        gap: 3px;
+        border-radius: 10px;
+        z-index: 1;
+        overflow: hidden;
+    }
 }

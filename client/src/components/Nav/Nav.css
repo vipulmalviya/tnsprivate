@@ -343,7 +343,6 @@ nav .left {
         color: white;
         font-size: 1rem;
         width: fit-content !important;
-        margin-right: 1rem;
     }
 
     .subHeader .container::before {

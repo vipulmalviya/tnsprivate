@@ -68,3 +68,21 @@
 .listItem svg {
     font-size: 1.4rem;
 }
+
+@media screen and (max-width: 428px) {
+
+    .listItem {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .div3,
+    .div4,
+    .div5 {
+        display: none !important;
+    }
+
+    .div2{
+        margin-left: 1rem;
+    }
+
+}

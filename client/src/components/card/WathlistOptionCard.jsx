@@ -8,7 +8,7 @@ import { PiCaretRightLight } from "react-icons/pi";
 const WathlistOptionCard = () => {
     return (
         <div className='wathlistOptions position-absolute d-flex align-items-center justify-content-center'>
-            <ul className='d-flex align-items-start justify-content-center flex-column'>
+            <ul className='d-flex align-items-center justify-content-center flex-column'>
                 <li><HiOutlinePencil /> Rename</li>
                 <li><RiDeleteBinLine /> Delete List</li>
                 <li><GrShareOption /> Share Watchlist <PiCaretRightLight /></li>
